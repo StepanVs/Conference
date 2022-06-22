@@ -106,13 +106,21 @@ namespace WindowsFormsApp2
             Form2 form2 = new Form2(sectionBindingSource, conferenceBindingSource, roomBindingSource);
             form2.Owner = this;
 
-            //if (form2.ShowDialog() == DialogResult.Cancel)
-            //    DB_context.Entry(sectionBindingSource).State = EntityState.Unchanged;
-            //else
-            //    DB_context.Entry(sectionBindingSource).State = EntityState.Modified;
+            if (form2.ShowDialog() == DialogResult.Cancel)
+                DB_context.Entry(sectionBindingSource.Current).State = EntityState.Unchanged;
+            else
+                DB_context.Entry(sectionBindingSource.Current).State = EntityState.Modified;
 
             DB_context.SaveChanges();
-            form2.ShowDialog();
+        }
+
+        private void conferenceDataGridView_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            СonfInfo сonfInfo = new СonfInfo(conferenceBindingSource, sectionBindingSource, roomBindingSource);
+            сonfInfo.Owner = this;
+
+            DB_context.SaveChanges();
+            сonfInfo.ShowDialog();
         }
     }
 }

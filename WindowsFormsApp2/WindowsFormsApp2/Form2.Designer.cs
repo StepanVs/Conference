@@ -72,10 +72,9 @@
             // headSectLabel
             // 
             headSectLabel.AutoSize = true;
-            headSectLabel.Location = new System.Drawing.Point(140, 44);
-            headSectLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            headSectLabel.Location = new System.Drawing.Point(210, 68);
             headSectLabel.Name = "headSectLabel";
-            headSectLabel.Size = new System.Drawing.Size(69, 13);
+            headSectLabel.Size = new System.Drawing.Size(102, 20);
             headSectLabel.TabIndex = 1;
             headSectLabel.Text = "HeadOfSect:";
             headSectLabel.Click += new System.EventHandler(this.headSectLabel_Click);
@@ -83,30 +82,27 @@
             // idConfLabel
             // 
             idConfLabel.AutoSize = true;
-            idConfLabel.Location = new System.Drawing.Point(140, 67);
-            idConfLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            idConfLabel.Location = new System.Drawing.Point(210, 103);
             idConfLabel.Name = "idConfLabel";
-            idConfLabel.Size = new System.Drawing.Size(65, 13);
+            idConfLabel.Size = new System.Drawing.Size(96, 20);
             idConfLabel.TabIndex = 3;
             idConfLabel.Text = "Conference:";
             // 
             // nameSectLabel
             // 
             nameSectLabel.AutoSize = true;
-            nameSectLabel.Location = new System.Drawing.Point(140, 91);
-            nameSectLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            nameSectLabel.Location = new System.Drawing.Point(210, 140);
             nameSectLabel.Name = "nameSectLabel";
-            nameSectLabel.Size = new System.Drawing.Size(71, 13);
+            nameSectLabel.Size = new System.Drawing.Size(105, 20);
             nameSectLabel.TabIndex = 7;
             nameSectLabel.Text = "NameOfSect:";
             // 
             // roomSectLabel
             // 
             roomSectLabel.AutoSize = true;
-            roomSectLabel.Location = new System.Drawing.Point(147, 111);
-            roomSectLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            roomSectLabel.Location = new System.Drawing.Point(220, 171);
             roomSectLabel.Name = "roomSectLabel";
-            roomSectLabel.Size = new System.Drawing.Size(38, 13);
+            roomSectLabel.Size = new System.Drawing.Size(56, 20);
             roomSectLabel.TabIndex = 9;
             roomSectLabel.Text = "Room:";
             // 
@@ -136,8 +132,9 @@
             this.sectionBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.sectionBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.sectionBindingNavigator.Name = "sectionBindingNavigator";
+            this.sectionBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.sectionBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.sectionBindingNavigator.Size = new System.Drawing.Size(422, 31);
+            this.sectionBindingNavigator.Size = new System.Drawing.Size(633, 33);
             this.sectionBindingNavigator.TabIndex = 0;
             this.sectionBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -147,7 +144,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
             // 
             // sectionBindingSource
@@ -157,7 +154,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(65, 28);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
@@ -167,7 +164,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
@@ -176,7 +173,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem
@@ -185,27 +182,28 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(35, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -213,7 +211,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -222,13 +220,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
             // 
             // sectionBindingNavigatorSaveItem
             // 
@@ -236,16 +234,15 @@
             this.sectionBindingNavigatorSaveItem.Enabled = false;
             this.sectionBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("sectionBindingNavigatorSaveItem.Image")));
             this.sectionBindingNavigatorSaveItem.Name = "sectionBindingNavigatorSaveItem";
-            this.sectionBindingNavigatorSaveItem.Size = new System.Drawing.Size(28, 28);
+            this.sectionBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 28);
             this.sectionBindingNavigatorSaveItem.Text = "Сохранить данные";
             // 
             // headSectTextBox
             // 
             this.headSectTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sectionBindingSource, "headSect", true));
-            this.headSectTextBox.Location = new System.Drawing.Point(210, 44);
-            this.headSectTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.headSectTextBox.Location = new System.Drawing.Point(315, 68);
             this.headSectTextBox.Name = "headSectTextBox";
-            this.headSectTextBox.Size = new System.Drawing.Size(82, 20);
+            this.headSectTextBox.Size = new System.Drawing.Size(121, 26);
             this.headSectTextBox.TabIndex = 2;
             // 
             // idConfComboBox
@@ -254,10 +251,9 @@
             this.idConfComboBox.DataSource = this.conferenceBindingSource;
             this.idConfComboBox.DisplayMember = "nameConf";
             this.idConfComboBox.FormattingEnabled = true;
-            this.idConfComboBox.Location = new System.Drawing.Point(210, 64);
-            this.idConfComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.idConfComboBox.Location = new System.Drawing.Point(315, 98);
             this.idConfComboBox.Name = "idConfComboBox";
-            this.idConfComboBox.Size = new System.Drawing.Size(82, 21);
+            this.idConfComboBox.Size = new System.Drawing.Size(221, 28);
             this.idConfComboBox.TabIndex = 4;
             this.idConfComboBox.ValueMember = "idConf";
             // 
@@ -268,23 +264,20 @@
             // nameSectTextBox
             // 
             this.nameSectTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sectionBindingSource, "nameSect", true));
-            this.nameSectTextBox.Location = new System.Drawing.Point(211, 88);
-            this.nameSectTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.nameSectTextBox.Location = new System.Drawing.Point(316, 135);
             this.nameSectTextBox.Name = "nameSectTextBox";
-            this.nameSectTextBox.Size = new System.Drawing.Size(82, 20);
+            this.nameSectTextBox.Size = new System.Drawing.Size(121, 26);
             this.nameSectTextBox.TabIndex = 8;
             // 
             // roomSectComboBox
             // 
-            this.roomSectComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sectionBindingSource, "roomSect", true));
             this.roomSectComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.sectionBindingSource, "roomSect", true));
             this.roomSectComboBox.DataSource = this.roomBindingSource;
             this.roomSectComboBox.DisplayMember = "name";
             this.roomSectComboBox.FormattingEnabled = true;
-            this.roomSectComboBox.Location = new System.Drawing.Point(211, 109);
-            this.roomSectComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.roomSectComboBox.Location = new System.Drawing.Point(316, 168);
             this.roomSectComboBox.Name = "roomSectComboBox";
-            this.roomSectComboBox.Size = new System.Drawing.Size(82, 21);
+            this.roomSectComboBox.Size = new System.Drawing.Size(121, 28);
             this.roomSectComboBox.TabIndex = 10;
             this.roomSectComboBox.ValueMember = "idRoom";
             // 
@@ -295,10 +288,9 @@
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(255, 166);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(382, 255);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 25);
+            this.button2.Size = new System.Drawing.Size(154, 38);
             this.button2.TabIndex = 38;
             this.button2.Text = "CANCEL";
             this.button2.UseVisualStyleBackColor = true;
@@ -306,10 +298,9 @@
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(43, 166);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(64, 255);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 25);
+            this.button1.Size = new System.Drawing.Size(152, 38);
             this.button1.TabIndex = 39;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
@@ -321,9 +312,9 @@
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(422, 214);
+            this.ClientSize = new System.Drawing.Size(633, 329);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(headSectLabel);
@@ -335,7 +326,6 @@
             this.Controls.Add(roomSectLabel);
             this.Controls.Add(this.roomSectComboBox);
             this.Controls.Add(this.sectionBindingNavigator);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form2";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.sectionBindingNavigator)).EndInit();
