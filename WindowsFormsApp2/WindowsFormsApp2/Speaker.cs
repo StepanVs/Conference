@@ -14,20 +14,14 @@ namespace WindowsFormsApp2
     
     public partial class Speaker
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Speaker()
-        {
-            this.PerfAndSpeakers = new ObservableListSource<PerfAndSpeaker>();
-        }
-    
         public int idSpeaker { get; set; }
         public string degreeSpeaker { get; set; }
         public string academStatus { get; set; }
         public string placeOfWork { get; set; }
         public string positionSpeaker { get; set; }
         public string profBiogSpeaker { get; set; }
+        public Nullable<int> idPerf { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ObservableListSource<PerfAndSpeaker> PerfAndSpeakers { get; set; }
+        public virtual Performance Performance { get; set; }
     }
 }

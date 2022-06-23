@@ -41,7 +41,7 @@ namespace WindowsFormsApp2
             speakerBindingSource.DataSource = DB_context.Speakers.Local.ToBindingList();
             roomBindingSource.DataSource = DB_context.Rooms.Local.ToBindingList();
             sectionBindingSource.DataSource = DB_context.Sections.Local.ToBindingList();
-           // this.equipmentDataGridView.Columns[0].Visible = false;
+            this.equipmentDataGridView.Columns[0].Visible = false;
             this.conferenceDataGridView.Columns[0].Visible = false;
             this.sectionDataGridView.Columns[0].Visible = false;
             this.roomDataGridView.Columns[0].Visible = false;

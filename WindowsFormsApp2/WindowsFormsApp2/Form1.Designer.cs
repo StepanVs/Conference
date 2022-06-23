@@ -75,7 +75,6 @@
             this.bindingNavigatorMoveLastItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.equipmentDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.RoombindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem3 = new System.Windows.Forms.ToolStripButton();
@@ -119,11 +118,11 @@
             this.bindingNavigatorMoveLastItem5 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator17 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.speakerDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.performanceDataGridView = new System.Windows.Forms.DataGridView();
+            this.equipmentDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -139,9 +138,11 @@
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.equipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idEquipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameEquipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -150,22 +151,23 @@
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.performanceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.speakerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.speakerDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.conferenceBindingNavigator)).BeginInit();
             this.conferenceBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.conferenceDataGridView)).BeginInit();
@@ -178,7 +180,6 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EquipmentbindingNavigator1)).BeginInit();
             this.EquipmentbindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.equipmentDataGridView)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RoombindingNavigator1)).BeginInit();
             this.RoombindingNavigator1.SuspendLayout();
@@ -189,14 +190,15 @@
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SpeakerbindingNavigator1)).BeginInit();
             this.SpeakerbindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.speakerDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.performanceDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipmentDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conferenceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.performanceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speakerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.speakerDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // conferenceBindingNavigator
@@ -551,8 +553,8 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.EquipmentbindingNavigator1);
             this.tabPage2.Controls.Add(this.equipmentDataGridView);
+            this.tabPage2.Controls.Add(this.EquipmentbindingNavigator1);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
@@ -687,26 +689,6 @@
             this.toolStripButton2.Size = new System.Drawing.Size(34, 28);
             this.toolStripButton2.Text = "Сохранить данные";
             this.toolStripButton2.Click += new System.EventHandler(this.EquipmenttoolStripButton2_Click);
-            // 
-            // equipmentDataGridView
-            // 
-            this.equipmentDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.equipmentDataGridView.AutoGenerateColumns = false;
-            this.equipmentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.equipmentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idEquipDataGridViewTextBoxColumn,
-            this.nameEquipDataGridViewTextBoxColumn});
-            this.equipmentDataGridView.DataSource = this.equipmentBindingSource;
-            this.equipmentDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.equipmentDataGridView.Location = new System.Drawing.Point(8, 6);
-            this.equipmentDataGridView.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.equipmentDataGridView.Name = "equipmentDataGridView";
-            this.equipmentDataGridView.RowHeadersWidth = 82;
-            this.equipmentDataGridView.RowTemplate.Height = 33;
-            this.equipmentDataGridView.Size = new System.Drawing.Size(1689, 831);
-            this.equipmentDataGridView.TabIndex = 2;
             // 
             // tabPage4
             // 
@@ -1012,8 +994,8 @@
             // 
             // tabPage6
             // 
-            this.tabPage6.Controls.Add(this.SpeakerbindingNavigator1);
             this.tabPage6.Controls.Add(this.speakerDataGridView);
+            this.tabPage6.Controls.Add(this.SpeakerbindingNavigator1);
             this.tabPage6.Location = new System.Drawing.Point(4, 29);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
@@ -1043,7 +1025,7 @@
             this.bindingNavigatorAddNewItem5,
             this.bindingNavigatorDeleteItem5,
             this.toolStripButton5});
-            this.SpeakerbindingNavigator1.Location = new System.Drawing.Point(3, 839);
+            this.SpeakerbindingNavigator1.Location = new System.Drawing.Point(3, 834);
             this.SpeakerbindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem5;
             this.SpeakerbindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem5;
             this.SpeakerbindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem5;
@@ -1051,7 +1033,7 @@
             this.SpeakerbindingNavigator1.Name = "SpeakerbindingNavigator1";
             this.SpeakerbindingNavigator1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.SpeakerbindingNavigator1.PositionItem = this.bindingNavigatorPositionItem5;
-            this.SpeakerbindingNavigator1.Size = new System.Drawing.Size(1694, 33);
+            this.SpeakerbindingNavigator1.Size = new System.Drawing.Size(1694, 38);
             this.SpeakerbindingNavigator1.TabIndex = 1;
             this.SpeakerbindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -1061,13 +1043,13 @@
             this.bindingNavigatorAddNewItem5.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem5.Image")));
             this.bindingNavigatorAddNewItem5.Name = "bindingNavigatorAddNewItem5";
             this.bindingNavigatorAddNewItem5.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem5.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem5.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorAddNewItem5.Text = "Добавить";
             // 
             // bindingNavigatorCountItem5
             // 
             this.bindingNavigatorCountItem5.Name = "bindingNavigatorCountItem5";
-            this.bindingNavigatorCountItem5.Size = new System.Drawing.Size(65, 28);
+            this.bindingNavigatorCountItem5.Size = new System.Drawing.Size(65, 33);
             this.bindingNavigatorCountItem5.Text = "для {0}";
             this.bindingNavigatorCountItem5.ToolTipText = "Общее число элементов";
             // 
@@ -1077,7 +1059,7 @@
             this.bindingNavigatorDeleteItem5.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem5.Image")));
             this.bindingNavigatorDeleteItem5.Name = "bindingNavigatorDeleteItem5";
             this.bindingNavigatorDeleteItem5.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem5.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorDeleteItem5.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorDeleteItem5.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem5
@@ -1086,7 +1068,7 @@
             this.bindingNavigatorMoveFirstItem5.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem5.Image")));
             this.bindingNavigatorMoveFirstItem5.Name = "bindingNavigatorMoveFirstItem5";
             this.bindingNavigatorMoveFirstItem5.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem5.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveFirstItem5.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveFirstItem5.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem5
@@ -1095,13 +1077,13 @@
             this.bindingNavigatorMovePreviousItem5.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem5.Image")));
             this.bindingNavigatorMovePreviousItem5.Name = "bindingNavigatorMovePreviousItem5";
             this.bindingNavigatorMovePreviousItem5.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem5.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMovePreviousItem5.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMovePreviousItem5.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator15
             // 
             this.bindingNavigatorSeparator15.Name = "bindingNavigatorSeparator15";
-            this.bindingNavigatorSeparator15.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator15.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorPositionItem5
             // 
@@ -1115,7 +1097,7 @@
             // bindingNavigatorSeparator16
             // 
             this.bindingNavigatorSeparator16.Name = "bindingNavigatorSeparator16";
-            this.bindingNavigatorSeparator16.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator16.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorMoveNextItem5
             // 
@@ -1123,7 +1105,7 @@
             this.bindingNavigatorMoveNextItem5.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem5.Image")));
             this.bindingNavigatorMoveNextItem5.Name = "bindingNavigatorMoveNextItem5";
             this.bindingNavigatorMoveNextItem5.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem5.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveNextItem5.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveNextItem5.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem5
@@ -1132,45 +1114,22 @@
             this.bindingNavigatorMoveLastItem5.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem5.Image")));
             this.bindingNavigatorMoveLastItem5.Name = "bindingNavigatorMoveLastItem5";
             this.bindingNavigatorMoveLastItem5.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem5.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveLastItem5.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveLastItem5.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator17
             // 
             this.bindingNavigatorSeparator17.Name = "bindingNavigatorSeparator17";
-            this.bindingNavigatorSeparator17.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator17.Size = new System.Drawing.Size(6, 38);
             // 
             // toolStripButton5
             // 
             this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(34, 28);
+            this.toolStripButton5.Size = new System.Drawing.Size(34, 33);
             this.toolStripButton5.Text = "Сохранить данные";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
-            // 
-            // speakerDataGridView
-            // 
-            this.speakerDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.speakerDataGridView.AutoGenerateColumns = false;
-            this.speakerDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.speakerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.speakerDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn36,
-            this.dataGridViewTextBoxColumn37,
-            this.dataGridViewTextBoxColumn38,
-            this.dataGridViewTextBoxColumn39,
-            this.dataGridViewTextBoxColumn40,
-            this.dataGridViewTextBoxColumn41});
-            this.speakerDataGridView.DataSource = this.speakerBindingSource;
-            this.speakerDataGridView.Location = new System.Drawing.Point(6, 6);
-            this.speakerDataGridView.Name = "speakerDataGridView";
-            this.speakerDataGridView.RowHeadersWidth = 62;
-            this.speakerDataGridView.RowTemplate.Height = 28;
-            this.speakerDataGridView.Size = new System.Drawing.Size(1689, 831);
-            this.speakerDataGridView.TabIndex = 0;
             // 
             // tabPage7
             // 
@@ -1212,8 +1171,6 @@
             this.dataGridViewTextBoxColumn30,
             this.dataGridViewTextBoxColumn31,
             this.dataGridViewTextBoxColumn32,
-            this.dataGridViewTextBoxColumn35,
-            this.dataGridViewTextBoxColumn43,
             this.dataGridViewTextBoxColumn44});
             this.performanceDataGridView.DataSource = this.performanceBindingSource;
             this.performanceDataGridView.Location = new System.Drawing.Point(6, 6);
@@ -1222,6 +1179,27 @@
             this.performanceDataGridView.RowTemplate.Height = 28;
             this.performanceDataGridView.Size = new System.Drawing.Size(1688, 830);
             this.performanceDataGridView.TabIndex = 1;
+            // 
+            // equipmentDataGridView
+            // 
+            this.equipmentDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.equipmentDataGridView.AutoGenerateColumns = false;
+            this.equipmentDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.equipmentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.equipmentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn45,
+            this.dataGridViewTextBoxColumn46,
+            this.dataGridViewTextBoxColumn47,
+            this.dataGridViewTextBoxColumn48});
+            this.equipmentDataGridView.DataSource = this.equipmentBindingSource;
+            this.equipmentDataGridView.Location = new System.Drawing.Point(6, 6);
+            this.equipmentDataGridView.Name = "equipmentDataGridView";
+            this.equipmentDataGridView.RowHeadersWidth = 62;
+            this.equipmentDataGridView.RowTemplate.Height = 28;
+            this.equipmentDataGridView.Size = new System.Drawing.Size(1688, 830);
+            this.equipmentDataGridView.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1328,25 +1306,37 @@
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
             this.dataGridViewTextBoxColumn19.Visible = false;
             // 
+            // dataGridViewTextBoxColumn45
+            // 
+            this.dataGridViewTextBoxColumn45.DataPropertyName = "idEquip";
+            this.dataGridViewTextBoxColumn45.HeaderText = "idEquip";
+            this.dataGridViewTextBoxColumn45.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
+            // 
+            // dataGridViewTextBoxColumn46
+            // 
+            this.dataGridViewTextBoxColumn46.DataPropertyName = "nameEquip";
+            this.dataGridViewTextBoxColumn46.HeaderText = "nameEquip";
+            this.dataGridViewTextBoxColumn46.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
+            // 
+            // dataGridViewTextBoxColumn47
+            // 
+            this.dataGridViewTextBoxColumn47.DataPropertyName = "idPerf";
+            this.dataGridViewTextBoxColumn47.HeaderText = "idPerf";
+            this.dataGridViewTextBoxColumn47.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
+            // 
+            // dataGridViewTextBoxColumn48
+            // 
+            this.dataGridViewTextBoxColumn48.DataPropertyName = "Performance";
+            this.dataGridViewTextBoxColumn48.HeaderText = "Performance";
+            this.dataGridViewTextBoxColumn48.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
+            // 
             // equipmentBindingSource
             // 
             this.equipmentBindingSource.DataSource = typeof(WindowsFormsApp2.Equipment);
-            // 
-            // idEquipDataGridViewTextBoxColumn
-            // 
-            this.idEquipDataGridViewTextBoxColumn.DataPropertyName = "idEquip";
-            this.idEquipDataGridViewTextBoxColumn.HeaderText = "idEquip";
-            this.idEquipDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.idEquipDataGridViewTextBoxColumn.Name = "idEquipDataGridViewTextBoxColumn";
-            this.idEquipDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // nameEquipDataGridViewTextBoxColumn
-            // 
-            this.nameEquipDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameEquipDataGridViewTextBoxColumn.DataPropertyName = "nameEquip";
-            this.nameEquipDataGridViewTextBoxColumn.HeaderText = "nameEquip";
-            this.nameEquipDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.nameEquipDataGridViewTextBoxColumn.Name = "nameEquipDataGridViewTextBoxColumn";
             // 
             // roomBindingSource
             // 
@@ -1402,58 +1392,6 @@
             this.dataGridViewTextBoxColumn26.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
             // 
-            // performanceBindingSource
-            // 
-            this.performanceBindingSource.DataSource = typeof(WindowsFormsApp2.Performance);
-            // 
-            // speakerBindingSource
-            // 
-            this.speakerBindingSource.DataSource = typeof(WindowsFormsApp2.Speaker);
-            // 
-            // dataGridViewTextBoxColumn36
-            // 
-            this.dataGridViewTextBoxColumn36.DataPropertyName = "idSpeaker";
-            this.dataGridViewTextBoxColumn36.HeaderText = "idSpeaker";
-            this.dataGridViewTextBoxColumn36.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
-            this.dataGridViewTextBoxColumn36.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn37
-            // 
-            this.dataGridViewTextBoxColumn37.DataPropertyName = "degreeSpeaker";
-            this.dataGridViewTextBoxColumn37.HeaderText = "degreeSpeaker";
-            this.dataGridViewTextBoxColumn37.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
-            // 
-            // dataGridViewTextBoxColumn38
-            // 
-            this.dataGridViewTextBoxColumn38.DataPropertyName = "academStatus";
-            this.dataGridViewTextBoxColumn38.HeaderText = "academStatus";
-            this.dataGridViewTextBoxColumn38.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
-            // 
-            // dataGridViewTextBoxColumn39
-            // 
-            this.dataGridViewTextBoxColumn39.DataPropertyName = "placeOfWork";
-            this.dataGridViewTextBoxColumn39.HeaderText = "placeOfWork";
-            this.dataGridViewTextBoxColumn39.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
-            // 
-            // dataGridViewTextBoxColumn40
-            // 
-            this.dataGridViewTextBoxColumn40.DataPropertyName = "positionSpeaker";
-            this.dataGridViewTextBoxColumn40.HeaderText = "positionSpeaker";
-            this.dataGridViewTextBoxColumn40.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
-            // 
-            // dataGridViewTextBoxColumn41
-            // 
-            this.dataGridViewTextBoxColumn41.DataPropertyName = "profBiogSpeaker";
-            this.dataGridViewTextBoxColumn41.HeaderText = "profBiogSpeaker";
-            this.dataGridViewTextBoxColumn41.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
-            this.dataGridViewTextBoxColumn41.Visible = false;
-            // 
             // dataGridViewTextBoxColumn28
             // 
             this.dataGridViewTextBoxColumn28.DataPropertyName = "idPerf";
@@ -1491,21 +1429,6 @@
             this.dataGridViewTextBoxColumn32.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
             // 
-            // dataGridViewTextBoxColumn35
-            // 
-            this.dataGridViewTextBoxColumn35.DataPropertyName = "IdEquip";
-            this.dataGridViewTextBoxColumn35.HeaderText = "IdEquip";
-            this.dataGridViewTextBoxColumn35.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
-            // 
-            // dataGridViewTextBoxColumn43
-            // 
-            this.dataGridViewTextBoxColumn43.DataPropertyName = "Equipment";
-            this.dataGridViewTextBoxColumn43.HeaderText = "Equipment";
-            this.dataGridViewTextBoxColumn43.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
-            this.dataGridViewTextBoxColumn43.Visible = false;
-            // 
             // dataGridViewTextBoxColumn44
             // 
             this.dataGridViewTextBoxColumn44.DataPropertyName = "Section";
@@ -1513,6 +1436,96 @@
             this.dataGridViewTextBoxColumn44.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
             this.dataGridViewTextBoxColumn44.Visible = false;
+            // 
+            // performanceBindingSource
+            // 
+            this.performanceBindingSource.DataSource = typeof(WindowsFormsApp2.Performance);
+            // 
+            // speakerBindingSource
+            // 
+            this.speakerBindingSource.DataSource = typeof(WindowsFormsApp2.Speaker);
+            // 
+            // speakerDataGridView
+            // 
+            this.speakerDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.speakerDataGridView.AutoGenerateColumns = false;
+            this.speakerDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.speakerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.speakerDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn36,
+            this.dataGridViewTextBoxColumn37,
+            this.dataGridViewTextBoxColumn38,
+            this.dataGridViewTextBoxColumn39,
+            this.dataGridViewTextBoxColumn40,
+            this.dataGridViewTextBoxColumn41,
+            this.dataGridViewTextBoxColumn49,
+            this.dataGridViewTextBoxColumn50});
+            this.speakerDataGridView.DataSource = this.speakerBindingSource;
+            this.speakerDataGridView.Location = new System.Drawing.Point(6, 6);
+            this.speakerDataGridView.Name = "speakerDataGridView";
+            this.speakerDataGridView.RowHeadersWidth = 62;
+            this.speakerDataGridView.RowTemplate.Height = 28;
+            this.speakerDataGridView.Size = new System.Drawing.Size(1688, 830);
+            this.speakerDataGridView.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.DataPropertyName = "idSpeaker";
+            this.dataGridViewTextBoxColumn36.HeaderText = "idSpeaker";
+            this.dataGridViewTextBoxColumn36.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.DataPropertyName = "degreeSpeaker";
+            this.dataGridViewTextBoxColumn37.HeaderText = "degreeSpeaker";
+            this.dataGridViewTextBoxColumn37.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            // 
+            // dataGridViewTextBoxColumn38
+            // 
+            this.dataGridViewTextBoxColumn38.DataPropertyName = "academStatus";
+            this.dataGridViewTextBoxColumn38.HeaderText = "academStatus";
+            this.dataGridViewTextBoxColumn38.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
+            // 
+            // dataGridViewTextBoxColumn39
+            // 
+            this.dataGridViewTextBoxColumn39.DataPropertyName = "placeOfWork";
+            this.dataGridViewTextBoxColumn39.HeaderText = "placeOfWork";
+            this.dataGridViewTextBoxColumn39.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            this.dataGridViewTextBoxColumn40.DataPropertyName = "positionSpeaker";
+            this.dataGridViewTextBoxColumn40.HeaderText = "positionSpeaker";
+            this.dataGridViewTextBoxColumn40.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            this.dataGridViewTextBoxColumn41.DataPropertyName = "profBiogSpeaker";
+            this.dataGridViewTextBoxColumn41.HeaderText = "profBiogSpeaker";
+            this.dataGridViewTextBoxColumn41.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
+            // 
+            // dataGridViewTextBoxColumn49
+            // 
+            this.dataGridViewTextBoxColumn49.DataPropertyName = "idPerf";
+            this.dataGridViewTextBoxColumn49.HeaderText = "idPerf";
+            this.dataGridViewTextBoxColumn49.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
+            // 
+            // dataGridViewTextBoxColumn50
+            // 
+            this.dataGridViewTextBoxColumn50.DataPropertyName = "Performance";
+            this.dataGridViewTextBoxColumn50.HeaderText = "Performance";
+            this.dataGridViewTextBoxColumn50.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
+            this.dataGridViewTextBoxColumn50.Visible = false;
             // 
             // Form1
             // 
@@ -1543,7 +1556,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.EquipmentbindingNavigator1)).EndInit();
             this.EquipmentbindingNavigator1.ResumeLayout(false);
             this.EquipmentbindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.equipmentDataGridView)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RoombindingNavigator1)).EndInit();
@@ -1560,14 +1572,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.SpeakerbindingNavigator1)).EndInit();
             this.SpeakerbindingNavigator1.ResumeLayout(false);
             this.SpeakerbindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.speakerDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.performanceDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipmentDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.conferenceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipmentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.performanceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.speakerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.speakerDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1595,7 +1608,6 @@
         private System.Windows.Forms.TabControl Conference;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView equipmentDataGridView;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
@@ -1617,15 +1629,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
         private System.Windows.Forms.BindingSource performanceBindingSource;
-        private System.Windows.Forms.DataGridView speakerDataGridView;
         private System.Windows.Forms.BindingSource speakerBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
         private System.Windows.Forms.DataGridViewTextBoxColumn equipAndPerfsDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabPage tabPage7;
@@ -1709,8 +1714,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idEquipDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameEquipDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
@@ -1719,6 +1722,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
+        private System.Windows.Forms.DataGridView equipmentDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn48;
+        private System.Windows.Forms.DataGridView speakerDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn49;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn50;
     }
 }
 

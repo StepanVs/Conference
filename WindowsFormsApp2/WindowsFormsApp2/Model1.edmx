@@ -22,14 +22,7 @@
           </Key>
           <Property Name="idEquip" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nameEquip" Type="nvarchar" MaxLength="50" Nullable="false" />
-        </EntityType>
-        <EntityType Name="PerfAndSpeaker">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="idSpeaker" Type="int" Nullable="false" />
-          <Property Name="idPerf" Type="int" Nullable="false" />
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idPerf" Type="int" />
         </EntityType>
         <EntityType Name="Performance">
           <Key>
@@ -40,7 +33,6 @@
           <Property Name="topicrf" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="datetimePerf" Type="datetime" Nullable="false" />
           <Property Name="durationPerf" Type="time" Precision="7" Nullable="false" />
-          <Property Name="IdEquip" Type="int" />
         </EntityType>
         <EntityType Name="Room">
           <Key>
@@ -74,40 +66,17 @@
           <Property Name="placeOfWork" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="positionSpeaker" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="profBiogSpeaker" Type="varchar(max)" />
+          <Property Name="idPerf" Type="int" />
         </EntityType>
-        <Association Name="FK_PerfAndSpeaker_Performance">
-          <End Role="Performance" Type="Self.Performance" Multiplicity="1" />
-          <End Role="PerfAndSpeaker" Type="Self.PerfAndSpeaker" Multiplicity="*" />
+        <Association Name="FK_Equipment_Performance">
+          <End Role="Performance" Type="Self.Performance" Multiplicity="0..1" />
+          <End Role="Equipment" Type="Self.Equipment" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Performance">
               <PropertyRef Name="idPerf" />
             </Principal>
-            <Dependent Role="PerfAndSpeaker">
+            <Dependent Role="Equipment">
               <PropertyRef Name="idPerf" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PerfAndSpeaker_Speaker">
-          <End Role="Speaker" Type="Self.Speaker" Multiplicity="1" />
-          <End Role="PerfAndSpeaker" Type="Self.PerfAndSpeaker" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Speaker">
-              <PropertyRef Name="idSpeaker" />
-            </Principal>
-            <Dependent Role="PerfAndSpeaker">
-              <PropertyRef Name="idSpeaker" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Performance_Equipment">
-          <End Role="Equipment" Type="Self.Equipment" Multiplicity="0..1" />
-          <End Role="Performance" Type="Self.Performance" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Equipment">
-              <PropertyRef Name="idEquip" />
-            </Principal>
-            <Dependent Role="Performance">
-              <PropertyRef Name="IdEquip" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -147,25 +116,28 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Speaker_Performance">
+          <End Role="Performance" Type="Self.Performance" Multiplicity="0..1" />
+          <End Role="Speaker" Type="Self.Speaker" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Performance">
+              <PropertyRef Name="idPerf" />
+            </Principal>
+            <Dependent Role="Speaker">
+              <PropertyRef Name="idPerf" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="Хранилище СonferenceModelContainer">
           <EntitySet Name="Conference" EntityType="Self.Conference" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Equipment" EntityType="Self.Equipment" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="PerfAndSpeaker" EntityType="Self.PerfAndSpeaker" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Performance" EntityType="Self.Performance" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Section" EntityType="Self.Section" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Speaker" EntityType="Self.Speaker" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_PerfAndSpeaker_Performance" Association="Self.FK_PerfAndSpeaker_Performance">
+          <AssociationSet Name="FK_Equipment_Performance" Association="Self.FK_Equipment_Performance">
             <End Role="Performance" EntitySet="Performance" />
-            <End Role="PerfAndSpeaker" EntitySet="PerfAndSpeaker" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PerfAndSpeaker_Speaker" Association="Self.FK_PerfAndSpeaker_Speaker">
-            <End Role="Speaker" EntitySet="Speaker" />
-            <End Role="PerfAndSpeaker" EntitySet="PerfAndSpeaker" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Performance_Equipment" Association="Self.FK_Performance_Equipment">
             <End Role="Equipment" EntitySet="Equipment" />
-            <End Role="Performance" EntitySet="Performance" />
           </AssociationSet>
           <AssociationSet Name="FK_Performance_Section" Association="Self.FK_Performance_Section">
             <End Role="Section" EntitySet="Section" />
@@ -178,6 +150,10 @@
           <AssociationSet Name="FK_Section_Rooms" Association="Self.FK_Section_Rooms">
             <End Role="Room" EntitySet="Room" />
             <End Role="Section" EntitySet="Section" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Speaker_Performance" Association="Self.FK_Speaker_Performance">
+            <End Role="Performance" EntitySet="Performance" />
+            <End Role="Speaker" EntitySet="Speaker" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -195,24 +171,6 @@
           <Property Name="build" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ranked" Type="Int32" />
           <NavigationProperty Name="Sections" Relationship="Self.FK_Section_Conference" FromRole="Conference" ToRole="Section" />
-        </EntityType>
-        <EntityType Name="Equipment">
-          <Key>
-            <PropertyRef Name="idEquip" />
-          </Key>
-          <Property Name="idEquip" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nameEquip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Performances" Relationship="СonferenceModel.FK_Performance_Equipment" FromRole="Equipment" ToRole="Performance" />
-        </EntityType>
-        <EntityType Name="PerfAndSpeaker">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="idSpeaker" Type="Int32" Nullable="false" />
-          <Property Name="idPerf" Type="Int32" Nullable="false" />
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="Speaker" Relationship="Self.FK_PerfAndSpeaker_Speaker" FromRole="PerfAndSpeaker" ToRole="Speaker" />
-          <NavigationProperty Name="Performance" Relationship="СonferenceModel.FK_PerfAndSpeaker_Performance" FromRole="PerfAndSpeaker" ToRole="Performance" />
         </EntityType>
         <EntityType Name="Room">
           <Key>
@@ -240,18 +198,6 @@
           <NavigationProperty Name="Room" Relationship="Self.FK_Section_Rooms" FromRole="Section" ToRole="Room" />
           <NavigationProperty Name="Performances" Relationship="СonferenceModel.FK_Performance_Section" FromRole="Section" ToRole="Performance" />
         </EntityType>
-        <EntityType Name="Speaker">
-          <Key>
-            <PropertyRef Name="idSpeaker" />
-          </Key>
-          <Property Name="idSpeaker" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="degreeSpeaker" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="academStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="placeOfWork" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="positionSpeaker" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="profBiogSpeaker" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="PerfAndSpeakers" Relationship="Self.FK_PerfAndSpeaker_Speaker" FromRole="Speaker" ToRole="PerfAndSpeaker" />
-        </EntityType>
         <Association Name="FK_Section_Conference">
           <End Role="Conference" Type="Self.Conference" Multiplicity="1" />
           <End Role="Section" Type="Self.Section" Multiplicity="*" />
@@ -261,18 +207,6 @@
             </Principal>
             <Dependent Role="Section">
               <PropertyRef Name="idConf" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PerfAndSpeaker_Speaker">
-          <End Role="Speaker" Type="Self.Speaker" Multiplicity="1" />
-          <End Role="PerfAndSpeaker" Type="Self.PerfAndSpeaker" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Speaker">
-              <PropertyRef Name="idSpeaker" />
-            </Principal>
-            <Dependent Role="PerfAndSpeaker">
-              <PropertyRef Name="idSpeaker" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -290,37 +224,41 @@
         </Association>
         <EntityContainer Name="СonferenceEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Conferences" EntityType="Self.Conference" />
-          <EntitySet Name="Equipments" EntityType="Self.Equipment" />
-          <EntitySet Name="PerfAndSpeakers" EntityType="Self.PerfAndSpeaker" />
           <EntitySet Name="Rooms" EntityType="Self.Room" />
           <EntitySet Name="Sections" EntityType="Self.Section" />
-          <EntitySet Name="Speakers" EntityType="Self.Speaker" />
           <AssociationSet Name="FK_Section_Conference" Association="Self.FK_Section_Conference">
             <End Role="Conference" EntitySet="Conferences" />
             <End Role="Section" EntitySet="Sections" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PerfAndSpeaker_Speaker" Association="Self.FK_PerfAndSpeaker_Speaker">
-            <End Role="Speaker" EntitySet="Speakers" />
-            <End Role="PerfAndSpeaker" EntitySet="PerfAndSpeakers" />
           </AssociationSet>
           <AssociationSet Name="FK_Section_Rooms" Association="Self.FK_Section_Rooms">
             <End Role="Room" EntitySet="Rooms" />
             <End Role="Section" EntitySet="Sections" />
           </AssociationSet>
+          <EntitySet Name="Equipments" EntityType="СonferenceModel.Equipment" />
           <EntitySet Name="Performances" EntityType="СonferenceModel.Performance" />
-          <AssociationSet Name="FK_Performance_Equipment" Association="СonferenceModel.FK_Performance_Equipment">
+          <EntitySet Name="Speakers" EntityType="СonferenceModel.Speaker" />
+          <AssociationSet Name="FK_Equipment_Performance" Association="СonferenceModel.FK_Equipment_Performance">
+            <End Role="Performance" EntitySet="Performances" />
             <End Role="Equipment" EntitySet="Equipments" />
-            <End Role="Performance" EntitySet="Performances" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PerfAndSpeaker_Performance" Association="СonferenceModel.FK_PerfAndSpeaker_Performance">
-            <End Role="Performance" EntitySet="Performances" />
-            <End Role="PerfAndSpeaker" EntitySet="PerfAndSpeakers" />
           </AssociationSet>
           <AssociationSet Name="FK_Performance_Section" Association="СonferenceModel.FK_Performance_Section">
             <End Role="Section" EntitySet="Sections" />
             <End Role="Performance" EntitySet="Performances" />
           </AssociationSet>
-        </EntityContainer>
+          <AssociationSet Name="FK_Speaker_Performance" Association="СonferenceModel.FK_Speaker_Performance">
+            <End Role="Performance" EntitySet="Performances" />
+            <End Role="Speaker" EntitySet="Speakers" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Equipment">
+          <Key>
+            <PropertyRef Name="idEquip" />
+          </Key>
+          <Property Name="idEquip" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nameEquip" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="idPerf" Type="Int32" />
+          <NavigationProperty Name="Performance" Relationship="СonferenceModel.FK_Equipment_Performance" FromRole="Equipment" ToRole="Performance" />
+        </EntityType>
         <EntityType Name="Performance">
           <Key>
             <PropertyRef Name="idPerf" />
@@ -330,31 +268,31 @@
           <Property Name="topicrf" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="datetimePerf" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="durationPerf" Type="Time" Nullable="false" Precision="7" />
-          <Property Name="IdEquip" Type="Int32" />
-          <NavigationProperty Name="Equipment" Relationship="СonferenceModel.FK_Performance_Equipment" FromRole="Performance" ToRole="Equipment" />
-          <NavigationProperty Name="PerfAndSpeakers" Relationship="СonferenceModel.FK_PerfAndSpeaker_Performance" FromRole="Performance" ToRole="PerfAndSpeaker" />
+          <NavigationProperty Name="Equipments" Relationship="СonferenceModel.FK_Equipment_Performance" FromRole="Performance" ToRole="Equipment" />
           <NavigationProperty Name="Section" Relationship="СonferenceModel.FK_Performance_Section" FromRole="Performance" ToRole="Section" />
+          <NavigationProperty Name="Speakers" Relationship="СonferenceModel.FK_Speaker_Performance" FromRole="Performance" ToRole="Speaker" />
         </EntityType>
-        <Association Name="FK_Performance_Equipment">
-          <End Type="СonferenceModel.Equipment" Role="Equipment" Multiplicity="0..1" />
-          <End Type="СonferenceModel.Performance" Role="Performance" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Equipment">
-              <PropertyRef Name="idEquip" />
-            </Principal>
-            <Dependent Role="Performance">
-              <PropertyRef Name="IdEquip" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PerfAndSpeaker_Performance">
-          <End Type="СonferenceModel.Performance" Role="Performance" Multiplicity="1" />
-          <End Type="СonferenceModel.PerfAndSpeaker" Role="PerfAndSpeaker" Multiplicity="*" />
+        <EntityType Name="Speaker">
+          <Key>
+            <PropertyRef Name="idSpeaker" />
+          </Key>
+          <Property Name="idSpeaker" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="degreeSpeaker" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="academStatus" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="placeOfWork" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="positionSpeaker" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="profBiogSpeaker" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="idPerf" Type="Int32" />
+          <NavigationProperty Name="Performance" Relationship="СonferenceModel.FK_Speaker_Performance" FromRole="Speaker" ToRole="Performance" />
+        </EntityType>
+        <Association Name="FK_Equipment_Performance">
+          <End Type="СonferenceModel.Performance" Role="Performance" Multiplicity="0..1" />
+          <End Type="СonferenceModel.Equipment" Role="Equipment" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Performance">
               <PropertyRef Name="idPerf" />
             </Principal>
-            <Dependent Role="PerfAndSpeaker">
+            <Dependent Role="Equipment">
               <PropertyRef Name="idPerf" />
             </Dependent>
           </ReferentialConstraint>
@@ -371,7 +309,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        <Association Name="FK_Speaker_Performance">
+          <End Type="СonferenceModel.Performance" Role="Performance" Multiplicity="0..1" />
+          <End Type="СonferenceModel.Speaker" Role="Speaker" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Performance">
+              <PropertyRef Name="idPerf" />
+            </Principal>
+            <Dependent Role="Speaker">
+              <PropertyRef Name="idPerf" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -386,23 +336,6 @@
                 <ScalarProperty Name="endConf" ColumnName="endConf" />
                 <ScalarProperty Name="build" ColumnName="build" />
                 <ScalarProperty Name="ranked" ColumnName="ranked" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Equipments">
-            <EntityTypeMapping TypeName="СonferenceModel.Equipment">
-              <MappingFragment StoreEntitySet="Equipment">
-                <ScalarProperty Name="idEquip" ColumnName="idEquip" />
-                <ScalarProperty Name="nameEquip" ColumnName="nameEquip" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="PerfAndSpeakers">
-            <EntityTypeMapping TypeName="СonferenceModel.PerfAndSpeaker">
-              <MappingFragment StoreEntitySet="PerfAndSpeaker">
-                <ScalarProperty Name="idSpeaker" ColumnName="idSpeaker" />
-                <ScalarProperty Name="idPerf" ColumnName="idPerf" />
-                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -430,27 +363,36 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Speakers">
-            <EntityTypeMapping TypeName="СonferenceModel.Speaker">
-              <MappingFragment StoreEntitySet="Speaker">
-                <ScalarProperty Name="idSpeaker" ColumnName="idSpeaker" />
-                <ScalarProperty Name="degreeSpeaker" ColumnName="degreeSpeaker" />
-                <ScalarProperty Name="academStatus" ColumnName="academStatus" />
-                <ScalarProperty Name="placeOfWork" ColumnName="placeOfWork" />
-                <ScalarProperty Name="positionSpeaker" ColumnName="positionSpeaker" />
-                <ScalarProperty Name="profBiogSpeaker" ColumnName="profBiogSpeaker" />
+          <EntitySetMapping Name="Equipments">
+            <EntityTypeMapping TypeName="СonferenceModel.Equipment">
+              <MappingFragment StoreEntitySet="Equipment">
+                <ScalarProperty Name="idPerf" ColumnName="idPerf" />
+                <ScalarProperty Name="nameEquip" ColumnName="nameEquip" />
+                <ScalarProperty Name="idEquip" ColumnName="idEquip" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Performances">
             <EntityTypeMapping TypeName="СonferenceModel.Performance">
               <MappingFragment StoreEntitySet="Performance">
-                <ScalarProperty Name="IdEquip" ColumnName="IdEquip" />
                 <ScalarProperty Name="durationPerf" ColumnName="durationPerf" />
                 <ScalarProperty Name="datetimePerf" ColumnName="datetimePerf" />
                 <ScalarProperty Name="topicrf" ColumnName="topicrf" />
                 <ScalarProperty Name="idSect" ColumnName="idSect" />
                 <ScalarProperty Name="idPerf" ColumnName="idPerf" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Speakers">
+            <EntityTypeMapping TypeName="СonferenceModel.Speaker">
+              <MappingFragment StoreEntitySet="Speaker">
+                <ScalarProperty Name="idPerf" ColumnName="idPerf" />
+                <ScalarProperty Name="profBiogSpeaker" ColumnName="profBiogSpeaker" />
+                <ScalarProperty Name="positionSpeaker" ColumnName="positionSpeaker" />
+                <ScalarProperty Name="placeOfWork" ColumnName="placeOfWork" />
+                <ScalarProperty Name="academStatus" ColumnName="academStatus" />
+                <ScalarProperty Name="degreeSpeaker" ColumnName="degreeSpeaker" />
+                <ScalarProperty Name="idSpeaker" ColumnName="idSpeaker" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

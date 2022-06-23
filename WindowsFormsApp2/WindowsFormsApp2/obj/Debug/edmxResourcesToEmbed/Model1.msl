@@ -13,23 +13,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Equipments">
-      <EntityTypeMapping TypeName="СonferenceModel.Equipment">
-        <MappingFragment StoreEntitySet="Equipment">
-          <ScalarProperty Name="idEquip" ColumnName="idEquip" />
-          <ScalarProperty Name="nameEquip" ColumnName="nameEquip" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="PerfAndSpeakers">
-      <EntityTypeMapping TypeName="СonferenceModel.PerfAndSpeaker">
-        <MappingFragment StoreEntitySet="PerfAndSpeaker">
-          <ScalarProperty Name="idSpeaker" ColumnName="idSpeaker" />
-          <ScalarProperty Name="idPerf" ColumnName="idPerf" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Rooms">
       <EntityTypeMapping TypeName="СonferenceModel.Room">
         <MappingFragment StoreEntitySet="Room">
@@ -54,27 +37,36 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Speakers">
-      <EntityTypeMapping TypeName="СonferenceModel.Speaker">
-        <MappingFragment StoreEntitySet="Speaker">
-          <ScalarProperty Name="idSpeaker" ColumnName="idSpeaker" />
-          <ScalarProperty Name="degreeSpeaker" ColumnName="degreeSpeaker" />
-          <ScalarProperty Name="academStatus" ColumnName="academStatus" />
-          <ScalarProperty Name="placeOfWork" ColumnName="placeOfWork" />
-          <ScalarProperty Name="positionSpeaker" ColumnName="positionSpeaker" />
-          <ScalarProperty Name="profBiogSpeaker" ColumnName="profBiogSpeaker" />
+    <EntitySetMapping Name="Equipments">
+      <EntityTypeMapping TypeName="СonferenceModel.Equipment">
+        <MappingFragment StoreEntitySet="Equipment">
+          <ScalarProperty Name="idPerf" ColumnName="idPerf" />
+          <ScalarProperty Name="nameEquip" ColumnName="nameEquip" />
+          <ScalarProperty Name="idEquip" ColumnName="idEquip" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Performances">
       <EntityTypeMapping TypeName="СonferenceModel.Performance">
         <MappingFragment StoreEntitySet="Performance">
-          <ScalarProperty Name="IdEquip" ColumnName="IdEquip" />
           <ScalarProperty Name="durationPerf" ColumnName="durationPerf" />
           <ScalarProperty Name="datetimePerf" ColumnName="datetimePerf" />
           <ScalarProperty Name="topicrf" ColumnName="topicrf" />
           <ScalarProperty Name="idSect" ColumnName="idSect" />
           <ScalarProperty Name="idPerf" ColumnName="idPerf" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Speakers">
+      <EntityTypeMapping TypeName="СonferenceModel.Speaker">
+        <MappingFragment StoreEntitySet="Speaker">
+          <ScalarProperty Name="idPerf" ColumnName="idPerf" />
+          <ScalarProperty Name="profBiogSpeaker" ColumnName="profBiogSpeaker" />
+          <ScalarProperty Name="positionSpeaker" ColumnName="positionSpeaker" />
+          <ScalarProperty Name="placeOfWork" ColumnName="placeOfWork" />
+          <ScalarProperty Name="academStatus" ColumnName="academStatus" />
+          <ScalarProperty Name="degreeSpeaker" ColumnName="degreeSpeaker" />
+          <ScalarProperty Name="idSpeaker" ColumnName="idSpeaker" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

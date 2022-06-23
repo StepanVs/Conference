@@ -14,16 +14,10 @@ namespace WindowsFormsApp2
     
     public partial class Equipment
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Equipment()
-        {
-            this.Performances = new ObservableListSource<Performance>();
-        }
-    
         public int idEquip { get; set; }
         public string nameEquip { get; set; }
+        public Nullable<int> idPerf { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ObservableListSource<Performance> Performances { get; set; }
+        public virtual Performance Performance { get; set; }
     }
 }
