@@ -64,6 +64,12 @@
     <Compile Include="Equipment.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="EquipmentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EquipmentInfo.Designer.cs">
+      <DependentUpon>EquipmentInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,12 +112,21 @@
     <Compile Include="Speaker.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="SpeakerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpeakerInfo.Designer.cs">
+      <DependentUpon>SpeakerInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="СonfInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="СonfInfo.Designer.cs">
       <DependentUpon>СonfInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EquipmentInfo.resx">
+      <DependentUpon>EquipmentInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +142,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SpeakerInfo.resx">
+      <DependentUpon>SpeakerInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="СonfInfo.resx">
       <DependentUpon>СonfInfo.cs</DependentUpon>
     </EmbeddedResource>

@@ -49,3 +49,5 @@ E:\Навчання\Універ\Семестр 6\Курсач\Conference\Window
 E:\Навчання\Універ\Семестр 6\Курсач\Conference\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\EntityFramework.xml
 E:\Навчання\Універ\Семестр 6\Курсач\Conference\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\EntityFramework.SqlServer.xml
 E:\Навчання\Універ\Семестр 6\Курсач\Conference\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CopyComplete
+E:\Навчання\Універ\Семестр 6\Курсач\Conference\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.SpeakerInfo.resources
+E:\Навчання\Універ\Семестр 6\Курсач\Conference\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.EquipmentInfo.resources

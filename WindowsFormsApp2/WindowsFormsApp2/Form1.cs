@@ -122,5 +122,33 @@ namespace WindowsFormsApp2
             DB_context.SaveChanges();
             сonfInfo.ShowDialog();
         }
+
+        private void speakerDataGridView_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            SpeakerInfo speakerInfo = new SpeakerInfo(speakerBindingSource, performanceBindingSource);
+            speakerInfo.Owner = this;
+
+            if (speakerInfo.ShowDialog() == DialogResult.Cancel)
+                DB_context.Entry(speakerBindingSource.Current).State = EntityState.Unchanged;
+            else
+                DB_context.Entry(speakerBindingSource.Current).State = EntityState.Modified;
+
+            DB_context.SaveChanges();
+        }
+
+        private void equipmentDataGridView_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            EquipmentInfo equipmentInfo = new EquipmentInfo(equipmentBindingSource, performanceBindingSource);
+            equipmentInfo.Owner = this;
+
+            if (equipmentInfo.ShowDialog() == DialogResult.Cancel)
+                DB_context.Entry(equipmentBindingSource.Current).State = EntityState.Unchanged;
+            else
+                DB_context.Entry(equipmentBindingSource.Current).State = EntityState.Modified;
+
+            DB_context.SaveChanges();
+
+
+        }
     }
 }
