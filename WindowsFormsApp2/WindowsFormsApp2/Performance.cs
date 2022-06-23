@@ -17,8 +17,8 @@ namespace WindowsFormsApp2
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Performance()
         {
-            this.EquipAndPerfs = new ObservableListSource<EquipAndPerf>();
-            this.PerfAndSpeakers = new ObservableListSource<PerfAndSpeaker>();
+            this.EquipAndPerfs = new HashSet<EquipAndPerf>();
+            this.PerfAndSpeakers = new HashSet<PerfAndSpeaker>();
         }
     
         public int idPerf { get; set; }
@@ -28,9 +28,9 @@ namespace WindowsFormsApp2
         public System.TimeSpan durationPerf { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ObservableListSource<EquipAndPerf> EquipAndPerfs { get; set; }
+        public virtual ICollection<EquipAndPerf> EquipAndPerfs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ObservableListSource<PerfAndSpeaker> PerfAndSpeakers { get; set; }
+        public virtual ICollection<PerfAndSpeaker> PerfAndSpeakers { get; set; }
         public virtual Section Section { get; set; }
     }
 }

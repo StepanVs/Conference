@@ -17,13 +17,13 @@ namespace WindowsFormsApp2
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Equipment()
         {
-            this.EquipAndPerfs = new ObservableListSource<EquipAndPerf>();
+            this.EquipAndPerfs = new HashSet<EquipAndPerf>();
         }
     
         public int idEquip { get; set; }
         public string nameEquip { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ObservableListSource<EquipAndPerf> EquipAndPerfs { get; set; }
+        public virtual ICollection<EquipAndPerf> EquipAndPerfs { get; set; }
     }
 }

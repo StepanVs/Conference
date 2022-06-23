@@ -17,7 +17,7 @@ namespace WindowsFormsApp2
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Room()
         {
-            this.Sections = new ObservableListSource<Section>();
+            this.Sections = new HashSet<Section>();
         }
     
         public int idRoom { get; set; }
@@ -29,6 +29,6 @@ namespace WindowsFormsApp2
         public Nullable<System.DateTime> DLC { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ObservableListSource<Section> Sections { get; set; }
+        public virtual ICollection<Section> Sections { get; set; }
     }
 }

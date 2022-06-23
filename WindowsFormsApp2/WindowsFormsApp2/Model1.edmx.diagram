@@ -8,7 +8,7 @@
         <EntityTypeShape EntityType="СonferenceModel.Conference" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="СonferenceModel.EquipAndPerf" Width="1.5" PointX="12.875" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="СonferenceModel.Equipment" Width="1.5" PointX="5" PointY="0.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="СonferenceModel.PerfAndSpeaker" Width="1.5" PointX="9" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="СonferenceModel.PerfAndSpeaker" Width="1.5" PointX="9.25" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="СonferenceModel.Performance" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="СonferenceModel.Room" Width="1.5" PointX="1.125" PointY="6.5" IsExpanded="true" />
         <EntityTypeShape EntityType="СonferenceModel.Section" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />

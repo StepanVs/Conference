@@ -17,7 +17,7 @@ namespace WindowsFormsApp2
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Speaker()
         {
-            this.PerfAndSpeakers = new ObservableListSource<PerfAndSpeaker>();
+            this.PerfAndSpeakers = new HashSet<PerfAndSpeaker>();
         }
     
         public int idSpeaker { get; set; }
@@ -28,6 +28,6 @@ namespace WindowsFormsApp2
         public string profBiogSpeaker { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ObservableListSource<PerfAndSpeaker> PerfAndSpeakers { get; set; }
+        public virtual ICollection<PerfAndSpeaker> PerfAndSpeakers { get; set; }
     }
 }
