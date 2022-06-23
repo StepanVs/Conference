@@ -17,7 +17,7 @@ namespace WindowsFormsApp2
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Conference()
         {
-            this.Sections = new HashSet<Section>();
+            this.Sections = new ObservableListSource<Section>();
         }
     
         public int idConf { get; set; }
@@ -28,6 +28,6 @@ namespace WindowsFormsApp2
         public Nullable<int> ranked { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Section> Sections { get; set; }
+        public virtual ObservableListSource<Section> Sections { get; set; }
     }
 }

@@ -15,8 +15,8 @@ namespace WindowsFormsApp2
         public СonfInfo(BindingSource ConfbindingSource, BindingSource SectbindingSource, BindingSource RoombindingSource)
         {
             InitializeComponent();
-            conferenceBindingSource.DataSource = ConfbindingSource;
-            sectionsBindingSource.DataSource = SectbindingSource;
+            conferenceBindingSource.DataSource = ConfbindingSource.Current;
+            //sectionsBindingSource.DataSource = SectbindingSource;
         }
 
     }

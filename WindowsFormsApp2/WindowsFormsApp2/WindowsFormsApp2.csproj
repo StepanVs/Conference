@@ -94,6 +94,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ObservableListSource.cs" />
     <Compile Include="PerfAndSpeaker.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
