@@ -193,7 +193,7 @@
             this.conferenceListBox.FormattingEnabled = true;
             this.conferenceListBox.ItemHeight = 20;
             this.conferenceListBox.Location = new System.Drawing.Point(59, 95);
-            this.conferenceListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.conferenceListBox.Margin = new System.Windows.Forms.Padding(2);
             this.conferenceListBox.Name = "conferenceListBox";
             this.conferenceListBox.Size = new System.Drawing.Size(512, 244);
             this.conferenceListBox.TabIndex = 1;
@@ -211,7 +211,7 @@
             this.sectionsListBox.FormattingEnabled = true;
             this.sectionsListBox.ItemHeight = 20;
             this.sectionsListBox.Location = new System.Drawing.Point(680, 95);
-            this.sectionsListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sectionsListBox.Margin = new System.Windows.Forms.Padding(2);
             this.sectionsListBox.Name = "sectionsListBox";
             this.sectionsListBox.Size = new System.Drawing.Size(467, 244);
             this.sectionsListBox.TabIndex = 2;
@@ -228,10 +228,9 @@
             this.performancesListBox.DisplayMember = "topicPerf";
             this.performancesListBox.FormattingEnabled = true;
             this.performancesListBox.ItemHeight = 20;
-            this.performancesListBox.Location = new System.Drawing.Point(59, 417);
-            this.performancesListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.performancesListBox.Location = new System.Drawing.Point(59, 445);
             this.performancesListBox.Name = "performancesListBox";
-            this.performancesListBox.Size = new System.Drawing.Size(512, 204);
+            this.performancesListBox.Size = new System.Drawing.Size(300, 204);
             this.performancesListBox.TabIndex = 3;
             this.performancesListBox.ValueMember = "idPerf";
             // 
@@ -239,7 +238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1241, 676);
+            this.ClientSize = new System.Drawing.Size(1241, 740);
             this.Controls.Add(this.performancesListBox);
             this.Controls.Add(this.sectionsListBox);
             this.Controls.Add(this.conferenceListBox);
@@ -251,7 +250,7 @@
             this.conferenceBindingNavigator.ResumeLayout(false);
             this.conferenceBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sectionsBindingSource)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.performancesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.performancesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
