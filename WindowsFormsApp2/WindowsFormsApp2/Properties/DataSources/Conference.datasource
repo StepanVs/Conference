@@ -7,23 +7,17 @@
 -->
 <GenericObjectDataSource DisplayName="Conference" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
    <Children>
-      <GenericObjectDataSource DisplayName="Sections" Version="1.0">
-         <TypeInfo>WindowsFormsApp2.Section, WindowsFormsApp2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
-      </GenericObjectDataSource>
       <GenericObjectDataSource DisplayName="Performances" Version="1.0">
          <TypeInfo>WindowsFormsApp2.Performance, WindowsFormsApp2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
       </GenericObjectDataSource>
-      <GenericObjectDataSource DisplayName="PerfAndSpeakers" Version="1.0">
-         <TypeInfo>WindowsFormsApp2.PerfAndSpeaker, WindowsFormsApp2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
-      </GenericObjectDataSource>
-      <GenericObjectDataSource DisplayName="Speaker" Version="1.0">
-         <TypeInfo>WindowsFormsApp2.Speaker, WindowsFormsApp2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+      <GenericObjectDataSource DisplayName="Equipment" Version="1.0">
+         <TypeInfo>WindowsFormsApp2.Equipment, WindowsFormsApp2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
          <TypeUISetting>
             <PropertyUISettings>
-               <PropertyUISetting Name="Conference.Sections.Performances.PerfAndSpeakers.Speaker">
+               <PropertyUISetting Name="Conference.Sections.Performances.Equipment">
                   <ControlSettings>
                      <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
-                        <BindableControlInfo Name="Сведения" Type="Microsoft.VSDesigner.Data.DataForm.Windows.DetailView" />
+                        <BindableControlInfo Name="ListBox" Type="System.Windows.Forms.ListBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
                      </ControlSetting>
                   </ControlSettings>
                </PropertyUISetting>

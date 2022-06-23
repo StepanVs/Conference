@@ -142,7 +142,6 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Conference.datasource" />
-    <None Include="Properties\DataSources\EquipAndPerf.datasource" />
     <None Include="Properties\DataSources\Equipment.datasource" />
     <None Include="Properties\DataSources\PerfAndSpeaker.datasource" />
     <None Include="Properties\DataSources\Performance.datasource" />

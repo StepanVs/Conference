@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(СonfInfo));
+            System.Windows.Forms.Label equipmentLabel;
             this.conferenceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.conferenceBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -47,13 +48,15 @@
             this.conferenceListBox = new System.Windows.Forms.ListBox();
             this.sectionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sectionsListBox = new System.Windows.Forms.ListBox();
-            this.performancesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.performancesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.performancesListBox = new System.Windows.Forms.ListBox();
+            this.equipmentListBox = new System.Windows.Forms.ListBox();
+            equipmentLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.conferenceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conferenceBindingNavigator)).BeginInit();
             this.conferenceBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sectionsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.performancesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.performancesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // conferenceBindingSource
@@ -217,28 +220,49 @@
             this.sectionsListBox.TabIndex = 2;
             this.sectionsListBox.ValueMember = "idSect";
             // 
-            // performancesBindingSource
+            // performancesBindingSource1
             // 
-            this.performancesBindingSource.DataMember = "Performances";
-            this.performancesBindingSource.DataSource = this.sectionsBindingSource;
+            this.performancesBindingSource1.DataMember = "Performances";
+            this.performancesBindingSource1.DataSource = this.sectionsBindingSource;
             // 
             // performancesListBox
             // 
-            this.performancesListBox.DataSource = this.performancesBindingSource;
-            this.performancesListBox.DisplayMember = "topicPerf";
+            this.performancesListBox.DataSource = this.performancesBindingSource1;
+            this.performancesListBox.DisplayMember = "topicrf";
             this.performancesListBox.FormattingEnabled = true;
             this.performancesListBox.ItemHeight = 20;
-            this.performancesListBox.Location = new System.Drawing.Point(59, 445);
+            this.performancesListBox.Location = new System.Drawing.Point(59, 438);
             this.performancesListBox.Name = "performancesListBox";
             this.performancesListBox.Size = new System.Drawing.Size(300, 204);
             this.performancesListBox.TabIndex = 3;
             this.performancesListBox.ValueMember = "idPerf";
+            // 
+            // equipmentLabel
+            // 
+            equipmentLabel.AutoSize = true;
+            equipmentLabel.Location = new System.Drawing.Point(744, 526);
+            equipmentLabel.Name = "equipmentLabel";
+            equipmentLabel.Size = new System.Drawing.Size(90, 20);
+            equipmentLabel.TabIndex = 4;
+            equipmentLabel.Text = "Equipment:";
+            // 
+            // equipmentListBox
+            // 
+            this.equipmentListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.performancesBindingSource1, "Equipment", true));
+            this.equipmentListBox.FormattingEnabled = true;
+            this.equipmentListBox.ItemHeight = 20;
+            this.equipmentListBox.Location = new System.Drawing.Point(840, 526);
+            this.equipmentListBox.Name = "equipmentListBox";
+            this.equipmentListBox.Size = new System.Drawing.Size(120, 84);
+            this.equipmentListBox.TabIndex = 5;
             // 
             // СonfInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1241, 740);
+            this.Controls.Add(equipmentLabel);
+            this.Controls.Add(this.equipmentListBox);
             this.Controls.Add(this.performancesListBox);
             this.Controls.Add(this.sectionsListBox);
             this.Controls.Add(this.conferenceListBox);
@@ -250,7 +274,7 @@
             this.conferenceBindingNavigator.ResumeLayout(false);
             this.conferenceBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sectionsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.performancesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.performancesBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,7 +299,8 @@
         private System.Windows.Forms.ListBox conferenceListBox;
         private System.Windows.Forms.BindingSource sectionsBindingSource;
         private System.Windows.Forms.ListBox sectionsListBox;
-        private System.Windows.Forms.BindingSource performancesBindingSource;
+        private System.Windows.Forms.BindingSource performancesBindingSource1;
         private System.Windows.Forms.ListBox performancesListBox;
+        private System.Windows.Forms.ListBox equipmentListBox;
     }
 }
