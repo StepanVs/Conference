@@ -68,38 +68,38 @@
             // idPerfLabel
             // 
             idPerfLabel.AutoSize = true;
-            idPerfLabel.Location = new System.Drawing.Point(115, 211);
+            idPerfLabel.Location = new System.Drawing.Point(111, 189);
             idPerfLabel.Name = "idPerfLabel";
-            idPerfLabel.Size = new System.Drawing.Size(58, 20);
+            idPerfLabel.Size = new System.Drawing.Size(106, 20);
             idPerfLabel.TabIndex = 3;
-            idPerfLabel.Text = "id Perf:";
+            idPerfLabel.Text = "Для виступу:";
             // 
             // nameEquipLabel
             // 
             nameEquipLabel.AutoSize = true;
-            nameEquipLabel.Location = new System.Drawing.Point(115, 136);
+            nameEquipLabel.Location = new System.Drawing.Point(111, 142);
             nameEquipLabel.Name = "nameEquipLabel";
-            nameEquipLabel.Size = new System.Drawing.Size(98, 20);
+            nameEquipLabel.Size = new System.Drawing.Size(157, 20);
             nameEquipLabel.TabIndex = 5;
-            nameEquipLabel.Text = "name Equip:";
+            nameEquipLabel.Text = "Назва обладнання:";
             // 
             // datetimePerfLabel
             // 
             datetimePerfLabel.AutoSize = true;
-            datetimePerfLabel.Location = new System.Drawing.Point(111, 242);
+            datetimePerfLabel.Location = new System.Drawing.Point(111, 221);
             datetimePerfLabel.Name = "datetimePerfLabel";
-            datetimePerfLabel.Size = new System.Drawing.Size(108, 20);
+            datetimePerfLabel.Size = new System.Drawing.Size(104, 20);
             datetimePerfLabel.TabIndex = 7;
-            datetimePerfLabel.Text = "datetime Perf:";
+            datetimePerfLabel.Text = "Час виступу:";
             // 
             // durationPerfLabel
             // 
             durationPerfLabel.AutoSize = true;
-            durationPerfLabel.Location = new System.Drawing.Point(115, 275);
+            durationPerfLabel.Location = new System.Drawing.Point(111, 253);
             durationPerfLabel.Name = "durationPerfLabel";
-            durationPerfLabel.Size = new System.Drawing.Size(104, 20);
+            durationPerfLabel.Size = new System.Drawing.Size(159, 20);
             durationPerfLabel.TabIndex = 9;
-            durationPerfLabel.Text = "duration Perf:";
+            durationPerfLabel.Text = "Тривалість виступу:";
             // 
             // equipmentBindingNavigator
             // 
@@ -128,7 +128,7 @@
             this.equipmentBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.equipmentBindingNavigator.Name = "equipmentBindingNavigator";
             this.equipmentBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.equipmentBindingNavigator.Size = new System.Drawing.Size(800, 33);
+            this.equipmentBindingNavigator.Size = new System.Drawing.Size(608, 33);
             this.equipmentBindingNavigator.TabIndex = 0;
             this.equipmentBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -148,7 +148,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(65, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(65, 33);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
@@ -158,7 +158,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
@@ -167,7 +167,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem
@@ -176,13 +176,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -197,7 +197,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -205,7 +205,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -214,13 +214,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 38);
             // 
             // equipmentBindingNavigatorSaveItem
             // 
@@ -228,22 +228,22 @@
             this.equipmentBindingNavigatorSaveItem.Enabled = false;
             this.equipmentBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("equipmentBindingNavigatorSaveItem.Image")));
             this.equipmentBindingNavigatorSaveItem.Name = "equipmentBindingNavigatorSaveItem";
-            this.equipmentBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 28);
+            this.equipmentBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 33);
             this.equipmentBindingNavigatorSaveItem.Text = "Сохранить данные";
             // 
             // nameEquipTextBox
             // 
             this.nameEquipTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.equipmentBindingSource, "nameEquip", true));
-            this.nameEquipTextBox.Location = new System.Drawing.Point(219, 133);
+            this.nameEquipTextBox.Location = new System.Drawing.Point(278, 136);
             this.nameEquipTextBox.Name = "nameEquipTextBox";
-            this.nameEquipTextBox.Size = new System.Drawing.Size(100, 26);
+            this.nameEquipTextBox.Size = new System.Drawing.Size(200, 26);
             this.nameEquipTextBox.TabIndex = 6;
             // 
             // datetimePerfDateTimePicker
             // 
             this.datetimePerfDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.equipmentBindingSource, "Performance.datetimePerf", true));
             this.datetimePerfDateTimePicker.Enabled = false;
-            this.datetimePerfDateTimePicker.Location = new System.Drawing.Point(225, 237);
+            this.datetimePerfDateTimePicker.Location = new System.Drawing.Point(278, 215);
             this.datetimePerfDateTimePicker.Name = "datetimePerfDateTimePicker";
             this.datetimePerfDateTimePicker.Size = new System.Drawing.Size(200, 26);
             this.datetimePerfDateTimePicker.TabIndex = 8;
@@ -252,7 +252,7 @@
             // 
             this.durationPerfTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.equipmentBindingSource, "Performance.durationPerf", true));
             this.durationPerfTextBox.Enabled = false;
-            this.durationPerfTextBox.Location = new System.Drawing.Point(225, 269);
+            this.durationPerfTextBox.Location = new System.Drawing.Point(278, 247);
             this.durationPerfTextBox.Name = "durationPerfTextBox";
             this.durationPerfTextBox.Size = new System.Drawing.Size(200, 26);
             this.durationPerfTextBox.TabIndex = 10;
@@ -260,7 +260,7 @@
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(119, 408);
+            this.button1.Location = new System.Drawing.Point(115, 353);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 37);
             this.button1.TabIndex = 17;
@@ -270,7 +270,7 @@
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(313, 408);
+            this.button2.Location = new System.Drawing.Point(362, 353);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 37);
             this.button2.TabIndex = 18;
@@ -283,7 +283,7 @@
             this.comboBox1.DataSource = this.performanceBindingSource;
             this.comboBox1.DisplayMember = "topicrf";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(225, 203);
+            this.comboBox1.Location = new System.Drawing.Point(278, 181);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(200, 28);
             this.comboBox1.TabIndex = 19;
@@ -297,7 +297,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 474);
+            this.ClientSize = new System.Drawing.Size(608, 474);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

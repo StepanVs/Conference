@@ -80,74 +80,74 @@
             // datetimePerfLabel
             // 
             datetimePerfLabel.AutoSize = true;
-            datetimePerfLabel.Location = new System.Drawing.Point(142, 395);
+            datetimePerfLabel.Location = new System.Drawing.Point(91, 393);
             datetimePerfLabel.Name = "datetimePerfLabel";
-            datetimePerfLabel.Size = new System.Drawing.Size(108, 20);
+            datetimePerfLabel.Size = new System.Drawing.Size(114, 20);
             datetimePerfLabel.TabIndex = 15;
-            datetimePerfLabel.Text = "datetime Perf:";
+            datetimePerfLabel.Text = "Дата виступу:";
             // 
             // profBiogSpeakerLabel
             // 
             profBiogSpeakerLabel.AutoSize = true;
-            profBiogSpeakerLabel.Location = new System.Drawing.Point(142, 263);
+            profBiogSpeakerLabel.Location = new System.Drawing.Point(91, 266);
             profBiogSpeakerLabel.Name = "profBiogSpeakerLabel";
-            profBiogSpeakerLabel.Size = new System.Drawing.Size(141, 20);
+            profBiogSpeakerLabel.Size = new System.Drawing.Size(188, 20);
             profBiogSpeakerLabel.TabIndex = 13;
-            profBiogSpeakerLabel.Text = "prof Biog Speaker:";
+            profBiogSpeakerLabel.Text = "Додаткова інформація:";
             // 
             // positionSpeakerLabel
             // 
             positionSpeakerLabel.AutoSize = true;
-            positionSpeakerLabel.Location = new System.Drawing.Point(142, 231);
+            positionSpeakerLabel.Location = new System.Drawing.Point(91, 234);
             positionSpeakerLabel.Name = "positionSpeakerLabel";
-            positionSpeakerLabel.Size = new System.Drawing.Size(132, 20);
+            positionSpeakerLabel.Size = new System.Drawing.Size(71, 20);
             positionSpeakerLabel.TabIndex = 11;
-            positionSpeakerLabel.Text = "position Speaker:";
+            positionSpeakerLabel.Text = "Посада:";
             // 
             // placeOfWorkLabel
             // 
             placeOfWorkLabel.AutoSize = true;
-            placeOfWorkLabel.Location = new System.Drawing.Point(142, 199);
+            placeOfWorkLabel.Location = new System.Drawing.Point(91, 202);
             placeOfWorkLabel.Name = "placeOfWorkLabel";
             placeOfWorkLabel.Size = new System.Drawing.Size(113, 20);
             placeOfWorkLabel.TabIndex = 9;
-            placeOfWorkLabel.Text = "place Of Work:";
+            placeOfWorkLabel.Text = "Місце роботи:";
             // 
             // idPerfLabel
             // 
             idPerfLabel.AutoSize = true;
-            idPerfLabel.Location = new System.Drawing.Point(142, 360);
+            idPerfLabel.Location = new System.Drawing.Point(91, 361);
             idPerfLabel.Name = "idPerfLabel";
-            idPerfLabel.Size = new System.Drawing.Size(58, 20);
+            idPerfLabel.Size = new System.Drawing.Size(150, 20);
             idPerfLabel.TabIndex = 5;
-            idPerfLabel.Text = "id Perf:";
+            idPerfLabel.Text = "Виступає з темою:";
             // 
             // degreeSpeakerLabel
             // 
             degreeSpeakerLabel.AutoSize = true;
-            degreeSpeakerLabel.Location = new System.Drawing.Point(136, 132);
+            degreeSpeakerLabel.Location = new System.Drawing.Point(91, 135);
             degreeSpeakerLabel.Name = "degreeSpeakerLabel";
-            degreeSpeakerLabel.Size = new System.Drawing.Size(127, 20);
+            degreeSpeakerLabel.Size = new System.Drawing.Size(133, 20);
             degreeSpeakerLabel.TabIndex = 3;
-            degreeSpeakerLabel.Text = "degree Speaker:";
+            degreeSpeakerLabel.Text = "Наукове звання:";
             // 
             // academStatusLabel
             // 
             academStatusLabel.AutoSize = true;
-            academStatusLabel.Location = new System.Drawing.Point(142, 167);
+            academStatusLabel.Location = new System.Drawing.Point(91, 167);
             academStatusLabel.Name = "academStatusLabel";
-            academStatusLabel.Size = new System.Drawing.Size(121, 20);
+            academStatusLabel.Size = new System.Drawing.Size(117, 20);
             academStatusLabel.TabIndex = 1;
-            academStatusLabel.Text = "academ Status:";
+            academStatusLabel.Text = "Вчене звання:";
             // 
             // durationPerfLabel
             // 
             durationPerfLabel.AutoSize = true;
-            durationPerfLabel.Location = new System.Drawing.Point(142, 425);
+            durationPerfLabel.Location = new System.Drawing.Point(91, 425);
             durationPerfLabel.Name = "durationPerfLabel";
-            durationPerfLabel.Size = new System.Drawing.Size(104, 20);
+            durationPerfLabel.Size = new System.Drawing.Size(159, 20);
             durationPerfLabel.TabIndex = 17;
-            durationPerfLabel.Text = "duration Perf:";
+            durationPerfLabel.Text = "Тривалість виступу:";
             // 
             // speakerBindingNavigator
             // 
@@ -236,6 +236,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -355,7 +356,7 @@
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(146, 507);
+            this.button1.Location = new System.Drawing.Point(95, 507);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 37);
             this.button1.TabIndex = 26;
@@ -365,7 +366,7 @@
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(347, 507);
+            this.button2.Location = new System.Drawing.Point(338, 507);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 37);
             this.button2.TabIndex = 27;

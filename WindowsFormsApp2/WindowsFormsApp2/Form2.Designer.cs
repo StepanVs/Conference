@@ -72,39 +72,39 @@
             // headSectLabel
             // 
             headSectLabel.AutoSize = true;
-            headSectLabel.Location = new System.Drawing.Point(210, 68);
+            headSectLabel.Location = new System.Drawing.Point(120, 105);
             headSectLabel.Name = "headSectLabel";
-            headSectLabel.Size = new System.Drawing.Size(102, 20);
+            headSectLabel.Size = new System.Drawing.Size(112, 20);
             headSectLabel.TabIndex = 1;
-            headSectLabel.Text = "HeadOfSect:";
+            headSectLabel.Text = "Голова секції:";
             headSectLabel.Click += new System.EventHandler(this.headSectLabel_Click);
             // 
             // idConfLabel
             // 
             idConfLabel.AutoSize = true;
-            idConfLabel.Location = new System.Drawing.Point(210, 103);
+            idConfLabel.Location = new System.Drawing.Point(121, 156);
             idConfLabel.Name = "idConfLabel";
-            idConfLabel.Size = new System.Drawing.Size(96, 20);
+            idConfLabel.Size = new System.Drawing.Size(165, 20);
             idConfLabel.TabIndex = 3;
-            idConfLabel.Text = "Conference:";
+            idConfLabel.Text = "Секція належить до:";
             // 
             // nameSectLabel
             // 
             nameSectLabel.AutoSize = true;
-            nameSectLabel.Location = new System.Drawing.Point(210, 140);
+            nameSectLabel.Location = new System.Drawing.Point(120, 70);
             nameSectLabel.Name = "nameSectLabel";
-            nameSectLabel.Size = new System.Drawing.Size(105, 20);
+            nameSectLabel.Size = new System.Drawing.Size(104, 20);
             nameSectLabel.TabIndex = 7;
-            nameSectLabel.Text = "NameOfSect:";
+            nameSectLabel.Text = "Назва секції:";
             // 
             // roomSectLabel
             // 
             roomSectLabel.AutoSize = true;
-            roomSectLabel.Location = new System.Drawing.Point(220, 171);
+            roomSectLabel.Location = new System.Drawing.Point(121, 194);
             roomSectLabel.Name = "roomSectLabel";
-            roomSectLabel.Size = new System.Drawing.Size(56, 20);
+            roomSectLabel.Size = new System.Drawing.Size(73, 20);
             roomSectLabel.TabIndex = 9;
-            roomSectLabel.Text = "Room:";
+            roomSectLabel.Text = "Кімната:";
             // 
             // sectionBindingNavigator
             // 
@@ -194,7 +194,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -240,9 +239,9 @@
             // headSectTextBox
             // 
             this.headSectTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sectionBindingSource, "headSect", true));
-            this.headSectTextBox.Location = new System.Drawing.Point(315, 68);
+            this.headSectTextBox.Location = new System.Drawing.Point(302, 99);
             this.headSectTextBox.Name = "headSectTextBox";
-            this.headSectTextBox.Size = new System.Drawing.Size(121, 26);
+            this.headSectTextBox.Size = new System.Drawing.Size(221, 26);
             this.headSectTextBox.TabIndex = 2;
             // 
             // idConfComboBox
@@ -251,7 +250,7 @@
             this.idConfComboBox.DataSource = this.conferenceBindingSource;
             this.idConfComboBox.DisplayMember = "nameConf";
             this.idConfComboBox.FormattingEnabled = true;
-            this.idConfComboBox.Location = new System.Drawing.Point(315, 98);
+            this.idConfComboBox.Location = new System.Drawing.Point(302, 148);
             this.idConfComboBox.Name = "idConfComboBox";
             this.idConfComboBox.Size = new System.Drawing.Size(221, 28);
             this.idConfComboBox.TabIndex = 4;
@@ -264,9 +263,9 @@
             // nameSectTextBox
             // 
             this.nameSectTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sectionBindingSource, "nameSect", true));
-            this.nameSectTextBox.Location = new System.Drawing.Point(316, 135);
+            this.nameSectTextBox.Location = new System.Drawing.Point(302, 64);
             this.nameSectTextBox.Name = "nameSectTextBox";
-            this.nameSectTextBox.Size = new System.Drawing.Size(121, 26);
+            this.nameSectTextBox.Size = new System.Drawing.Size(220, 26);
             this.nameSectTextBox.TabIndex = 8;
             // 
             // roomSectComboBox
@@ -275,9 +274,9 @@
             this.roomSectComboBox.DataSource = this.roomBindingSource;
             this.roomSectComboBox.DisplayMember = "name";
             this.roomSectComboBox.FormattingEnabled = true;
-            this.roomSectComboBox.Location = new System.Drawing.Point(316, 168);
+            this.roomSectComboBox.Location = new System.Drawing.Point(302, 186);
             this.roomSectComboBox.Name = "roomSectComboBox";
-            this.roomSectComboBox.Size = new System.Drawing.Size(121, 28);
+            this.roomSectComboBox.Size = new System.Drawing.Size(220, 28);
             this.roomSectComboBox.TabIndex = 10;
             this.roomSectComboBox.ValueMember = "idRoom";
             // 
@@ -288,7 +287,7 @@
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(382, 255);
+            this.button2.Location = new System.Drawing.Point(358, 253);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(154, 38);
             this.button2.TabIndex = 38;
@@ -298,7 +297,7 @@
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(64, 255);
+            this.button1.Location = new System.Drawing.Point(124, 253);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(152, 38);
             this.button1.TabIndex = 39;
@@ -326,6 +325,7 @@
             this.Controls.Add(roomSectLabel);
             this.Controls.Add(this.roomSectComboBox);
             this.Controls.Add(this.sectionBindingNavigator);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form2";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.sectionBindingNavigator)).EndInit();

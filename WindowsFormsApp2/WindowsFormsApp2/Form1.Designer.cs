@@ -121,9 +121,10 @@
             this.bindingNavigatorMoveLastItem5 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator17 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.positionSpeaker = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profBiogSpeaker = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -139,7 +140,6 @@
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.equipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -159,8 +159,6 @@
             this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.speakerBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -168,6 +166,7 @@
             this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.equipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.conferenceBindingNavigator)).BeginInit();
             this.conferenceBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.conferenceDataGridView)).BeginInit();
@@ -195,10 +194,10 @@
             this.SpeakerbindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.conferenceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equipmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.performanceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speakerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipmentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // conferenceBindingNavigator
@@ -288,6 +287,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(38, 31);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -363,11 +363,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Conference.Controls.Add(this.tabPage1);
             this.Conference.Controls.Add(this.tabPage3);
-            this.Conference.Controls.Add(this.tabPage2);
             this.Conference.Controls.Add(this.tabPage4);
             this.Conference.Controls.Add(this.tabPage5);
             this.Conference.Controls.Add(this.tabPage6);
-            this.Conference.Controls.Add(this.tabPage7);
+            this.Conference.Controls.Add(this.tabPage2);
             this.Conference.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Conference.Location = new System.Drawing.Point(2, 5);
             this.Conference.Name = "Conference";
@@ -384,7 +383,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1700, 875);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Conference";
+            this.tabPage1.Text = "Конференції";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage3
@@ -396,7 +395,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1700, 875);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Section";
+            this.tabPage3.Text = "Секції";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // SectionbindingNavigator1
@@ -484,6 +483,7 @@
             // 
             this.bindingNavigatorPositionItem1.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem1.AutoSize = false;
+            this.bindingNavigatorPositionItem1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
             this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem1.Text = "0";
@@ -560,7 +560,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1700, 875);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Equipment";
+            this.tabPage2.Text = "Обладнання";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // equipmentDataGridView
@@ -606,7 +606,7 @@
             this.bindingNavigatorAddNewItem2,
             this.bindingNavigatorDeleteItem2,
             this.toolStripButton2});
-            this.EquipmentbindingNavigator1.Location = new System.Drawing.Point(3, 839);
+            this.EquipmentbindingNavigator1.Location = new System.Drawing.Point(3, 834);
             this.EquipmentbindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem2;
             this.EquipmentbindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem2;
             this.EquipmentbindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem2;
@@ -614,7 +614,7 @@
             this.EquipmentbindingNavigator1.Name = "EquipmentbindingNavigator1";
             this.EquipmentbindingNavigator1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.EquipmentbindingNavigator1.PositionItem = this.bindingNavigatorPositionItem2;
-            this.EquipmentbindingNavigator1.Size = new System.Drawing.Size(1694, 33);
+            this.EquipmentbindingNavigator1.Size = new System.Drawing.Size(1694, 38);
             this.EquipmentbindingNavigator1.TabIndex = 3;
             this.EquipmentbindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -624,7 +624,7 @@
             this.bindingNavigatorAddNewItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem2.Image")));
             this.bindingNavigatorAddNewItem2.Name = "bindingNavigatorAddNewItem2";
             this.bindingNavigatorAddNewItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem2.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem2.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorAddNewItem2.Text = "для {0}";
             // 
             // bindingNavigatorDeleteItem2
@@ -633,7 +633,7 @@
             this.bindingNavigatorDeleteItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem2.Image")));
             this.bindingNavigatorDeleteItem2.Name = "bindingNavigatorDeleteItem2";
             this.bindingNavigatorDeleteItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem2.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorDeleteItem2.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorDeleteItem2.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem2
@@ -642,7 +642,7 @@
             this.bindingNavigatorMoveFirstItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem2.Image")));
             this.bindingNavigatorMoveFirstItem2.Name = "bindingNavigatorMoveFirstItem2";
             this.bindingNavigatorMoveFirstItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem2.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveFirstItem2.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveFirstItem2.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem2
@@ -651,18 +651,19 @@
             this.bindingNavigatorMovePreviousItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem2.Image")));
             this.bindingNavigatorMovePreviousItem2.Name = "bindingNavigatorMovePreviousItem2";
             this.bindingNavigatorMovePreviousItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem2.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMovePreviousItem2.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMovePreviousItem2.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator6
             // 
             this.bindingNavigatorSeparator6.Name = "bindingNavigatorSeparator6";
-            this.bindingNavigatorSeparator6.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator6.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorPositionItem2
             // 
             this.bindingNavigatorPositionItem2.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem2.AutoSize = false;
+            this.bindingNavigatorPositionItem2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem2.Name = "bindingNavigatorPositionItem2";
             this.bindingNavigatorPositionItem2.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem2.Text = "0";
@@ -671,14 +672,14 @@
             // bindingNavigatorCountItem2
             // 
             this.bindingNavigatorCountItem2.Name = "bindingNavigatorCountItem2";
-            this.bindingNavigatorCountItem2.Size = new System.Drawing.Size(65, 28);
+            this.bindingNavigatorCountItem2.Size = new System.Drawing.Size(65, 33);
             this.bindingNavigatorCountItem2.Text = "для {0}";
             this.bindingNavigatorCountItem2.ToolTipText = "Общее число элементов";
             // 
             // bindingNavigatorSeparator7
             // 
             this.bindingNavigatorSeparator7.Name = "bindingNavigatorSeparator7";
-            this.bindingNavigatorSeparator7.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator7.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorMoveNextItem2
             // 
@@ -686,7 +687,7 @@
             this.bindingNavigatorMoveNextItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem2.Image")));
             this.bindingNavigatorMoveNextItem2.Name = "bindingNavigatorMoveNextItem2";
             this.bindingNavigatorMoveNextItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem2.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveNextItem2.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveNextItem2.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem2
@@ -695,20 +696,20 @@
             this.bindingNavigatorMoveLastItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem2.Image")));
             this.bindingNavigatorMoveLastItem2.Name = "bindingNavigatorMoveLastItem2";
             this.bindingNavigatorMoveLastItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem2.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveLastItem2.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveLastItem2.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator8
             // 
             this.bindingNavigatorSeparator8.Name = "bindingNavigatorSeparator8";
-            this.bindingNavigatorSeparator8.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator8.Size = new System.Drawing.Size(6, 38);
             // 
             // toolStripButton2
             // 
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(34, 28);
+            this.toolStripButton2.Size = new System.Drawing.Size(34, 33);
             this.toolStripButton2.Text = "Сохранить данные";
             this.toolStripButton2.Click += new System.EventHandler(this.EquipmenttoolStripButton2_Click);
             // 
@@ -721,7 +722,7 @@
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(1700, 875);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Room";
+            this.tabPage4.Text = "Приміщення";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // RoombindingNavigator1
@@ -809,6 +810,7 @@
             // 
             this.bindingNavigatorPositionItem3.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem3.AutoSize = false;
+            this.bindingNavigatorPositionItem3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem3.Name = "bindingNavigatorPositionItem3";
             this.bindingNavigatorPositionItem3.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem3.Text = "0";
@@ -884,7 +886,7 @@
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(1700, 875);
             this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Perfomance";
+            this.tabPage5.Text = "Виступ";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // performanceDataGridView
@@ -931,7 +933,7 @@
             this.bindingNavigatorAddNewItem4,
             this.bindingNavigatorDeleteItem4,
             this.toolStripButton4});
-            this.PerfomancebindingNavigator1.Location = new System.Drawing.Point(3, 834);
+            this.PerfomancebindingNavigator1.Location = new System.Drawing.Point(3, 839);
             this.PerfomancebindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem4;
             this.PerfomancebindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem4;
             this.PerfomancebindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem4;
@@ -939,7 +941,7 @@
             this.PerfomancebindingNavigator1.Name = "PerfomancebindingNavigator1";
             this.PerfomancebindingNavigator1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.PerfomancebindingNavigator1.PositionItem = this.bindingNavigatorPositionItem4;
-            this.PerfomancebindingNavigator1.Size = new System.Drawing.Size(1694, 38);
+            this.PerfomancebindingNavigator1.Size = new System.Drawing.Size(1694, 33);
             this.PerfomancebindingNavigator1.TabIndex = 1;
             this.PerfomancebindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -949,13 +951,13 @@
             this.bindingNavigatorAddNewItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem4.Image")));
             this.bindingNavigatorAddNewItem4.Name = "bindingNavigatorAddNewItem4";
             this.bindingNavigatorAddNewItem4.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem4.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorAddNewItem4.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorAddNewItem4.Text = "Добавить";
             // 
             // bindingNavigatorCountItem4
             // 
             this.bindingNavigatorCountItem4.Name = "bindingNavigatorCountItem4";
-            this.bindingNavigatorCountItem4.Size = new System.Drawing.Size(65, 33);
+            this.bindingNavigatorCountItem4.Size = new System.Drawing.Size(65, 28);
             this.bindingNavigatorCountItem4.Text = "для {0}";
             this.bindingNavigatorCountItem4.ToolTipText = "Общее число элементов";
             // 
@@ -965,7 +967,7 @@
             this.bindingNavigatorDeleteItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem4.Image")));
             this.bindingNavigatorDeleteItem4.Name = "bindingNavigatorDeleteItem4";
             this.bindingNavigatorDeleteItem4.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem4.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorDeleteItem4.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorDeleteItem4.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem4
@@ -974,7 +976,7 @@
             this.bindingNavigatorMoveFirstItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem4.Image")));
             this.bindingNavigatorMoveFirstItem4.Name = "bindingNavigatorMoveFirstItem4";
             this.bindingNavigatorMoveFirstItem4.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem4.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveFirstItem4.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveFirstItem4.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem4
@@ -983,18 +985,19 @@
             this.bindingNavigatorMovePreviousItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem4.Image")));
             this.bindingNavigatorMovePreviousItem4.Name = "bindingNavigatorMovePreviousItem4";
             this.bindingNavigatorMovePreviousItem4.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem4.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMovePreviousItem4.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMovePreviousItem4.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator12
             // 
             this.bindingNavigatorSeparator12.Name = "bindingNavigatorSeparator12";
-            this.bindingNavigatorSeparator12.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator12.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorPositionItem4
             // 
             this.bindingNavigatorPositionItem4.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem4.AutoSize = false;
+            this.bindingNavigatorPositionItem4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem4.Name = "bindingNavigatorPositionItem4";
             this.bindingNavigatorPositionItem4.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem4.Text = "0";
@@ -1003,7 +1006,7 @@
             // bindingNavigatorSeparator13
             // 
             this.bindingNavigatorSeparator13.Name = "bindingNavigatorSeparator13";
-            this.bindingNavigatorSeparator13.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator13.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorMoveNextItem4
             // 
@@ -1011,7 +1014,7 @@
             this.bindingNavigatorMoveNextItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem4.Image")));
             this.bindingNavigatorMoveNextItem4.Name = "bindingNavigatorMoveNextItem4";
             this.bindingNavigatorMoveNextItem4.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem4.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveNextItem4.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveNextItem4.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem4
@@ -1020,20 +1023,20 @@
             this.bindingNavigatorMoveLastItem4.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem4.Image")));
             this.bindingNavigatorMoveLastItem4.Name = "bindingNavigatorMoveLastItem4";
             this.bindingNavigatorMoveLastItem4.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem4.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveLastItem4.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveLastItem4.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator14
             // 
             this.bindingNavigatorSeparator14.Name = "bindingNavigatorSeparator14";
-            this.bindingNavigatorSeparator14.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator14.Size = new System.Drawing.Size(6, 33);
             // 
             // toolStripButton4
             // 
             this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(34, 33);
+            this.toolStripButton4.Size = new System.Drawing.Size(34, 28);
             this.toolStripButton4.Text = "Сохранить данные";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
@@ -1046,7 +1049,7 @@
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage6.Size = new System.Drawing.Size(1700, 875);
             this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Speaker";
+            this.tabPage6.Text = "Учасник виступу";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // speakerDataGridView
@@ -1062,8 +1065,8 @@
             this.dataGridViewTextBoxColumn37,
             this.dataGridViewTextBoxColumn38,
             this.dataGridViewTextBoxColumn39,
-            this.dataGridViewTextBoxColumn40,
-            this.dataGridViewTextBoxColumn41,
+            this.positionSpeaker,
+            this.profBiogSpeaker,
             this.dataGridViewTextBoxColumn49,
             this.dataGridViewTextBoxColumn50});
             this.speakerDataGridView.DataSource = this.speakerBindingSource;
@@ -1160,6 +1163,7 @@
             // 
             this.bindingNavigatorPositionItem5.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem5.AutoSize = false;
+            this.bindingNavigatorPositionItem5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem5.Name = "bindingNavigatorPositionItem5";
             this.bindingNavigatorPositionItem5.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem5.Text = "0";
@@ -1202,16 +1206,6 @@
             this.toolStripButton5.Text = "Сохранить данные";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
-            // tabPage7
-            // 
-            this.tabPage7.Location = new System.Drawing.Point(4, 29);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1700, 875);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "tabPage7";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "nameEquip";
@@ -1228,6 +1222,20 @@
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.Width = 770;
             // 
+            // positionSpeaker
+            // 
+            this.positionSpeaker.DataPropertyName = "positionSpeaker";
+            this.positionSpeaker.HeaderText = "Посада";
+            this.positionSpeaker.MinimumWidth = 8;
+            this.positionSpeaker.Name = "positionSpeaker";
+            // 
+            // profBiogSpeaker
+            // 
+            this.profBiogSpeaker.DataPropertyName = "profBiogSpeaker";
+            this.profBiogSpeaker.HeaderText = "Додаткова інформація";
+            this.profBiogSpeaker.MinimumWidth = 8;
+            this.profBiogSpeaker.Name = "profBiogSpeaker";
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "idConf";
@@ -1239,21 +1247,21 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "nameConf";
-            this.dataGridViewTextBoxColumn2.HeaderText = "nameConf";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Назва конференції";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 12;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "beginConf";
-            this.dataGridViewTextBoxColumn3.HeaderText = "beginConf";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Час початку";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 12;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "endConf";
-            this.dataGridViewTextBoxColumn4.HeaderText = "endConf";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Чаз закінчення";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 12;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
@@ -1263,6 +1271,7 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "build";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 12;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Visible = false;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -1270,6 +1279,7 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "ranked";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 12;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Visible = false;
             // 
             // conferenceBindingSource
             // 
@@ -1298,14 +1308,14 @@
             // dataGridViewTextBoxColumn14
             // 
             this.dataGridViewTextBoxColumn14.DataPropertyName = "nameSect";
-            this.dataGridViewTextBoxColumn14.HeaderText = "nameSect";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Назва секції";
             this.dataGridViewTextBoxColumn14.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
             // dataGridViewTextBoxColumn15
             // 
             this.dataGridViewTextBoxColumn15.DataPropertyName = "headSect";
-            this.dataGridViewTextBoxColumn15.HeaderText = "headSect";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Головна секції";
             this.dataGridViewTextBoxColumn15.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             // 
@@ -1333,10 +1343,6 @@
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
             this.dataGridViewTextBoxColumn19.Visible = false;
             // 
-            // equipmentBindingSource
-            // 
-            this.equipmentBindingSource.DataSource = typeof(WindowsFormsApp2.Equipment);
-            // 
             // roomBindingSource
             // 
             this.roomBindingSource.DataSource = typeof(WindowsFormsApp2.Room);
@@ -1352,7 +1358,7 @@
             // dataGridViewTextBoxColumn21
             // 
             this.dataGridViewTextBoxColumn21.DataPropertyName = "name";
-            this.dataGridViewTextBoxColumn21.HeaderText = "name";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Назва приміщення";
             this.dataGridViewTextBoxColumn21.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
             // 
@@ -1362,6 +1368,7 @@
             this.dataGridViewTextBoxColumn22.HeaderText = "UCR";
             this.dataGridViewTextBoxColumn22.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.Visible = false;
             // 
             // dataGridViewTextBoxColumn23
             // 
@@ -1369,11 +1376,12 @@
             this.dataGridViewTextBoxColumn23.HeaderText = "DCR";
             this.dataGridViewTextBoxColumn23.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.Visible = false;
             // 
             // dataGridViewTextBoxColumn24
             // 
             this.dataGridViewTextBoxColumn24.DataPropertyName = "Number";
-            this.dataGridViewTextBoxColumn24.HeaderText = "Number";
+            this.dataGridViewTextBoxColumn24.HeaderText = "Номер приміщення";
             this.dataGridViewTextBoxColumn24.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
             // 
@@ -1383,6 +1391,7 @@
             this.dataGridViewTextBoxColumn25.HeaderText = "ULC";
             this.dataGridViewTextBoxColumn25.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.Visible = false;
             // 
             // dataGridViewTextBoxColumn26
             // 
@@ -1390,6 +1399,7 @@
             this.dataGridViewTextBoxColumn26.HeaderText = "DLC";
             this.dataGridViewTextBoxColumn26.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.Visible = false;
             // 
             // dataGridViewTextBoxColumn28
             // 
@@ -1410,21 +1420,21 @@
             // dataGridViewTextBoxColumn30
             // 
             this.dataGridViewTextBoxColumn30.DataPropertyName = "topicrf";
-            this.dataGridViewTextBoxColumn30.HeaderText = "topicrf";
+            this.dataGridViewTextBoxColumn30.HeaderText = "Тема виступу";
             this.dataGridViewTextBoxColumn30.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
             // 
             // dataGridViewTextBoxColumn31
             // 
             this.dataGridViewTextBoxColumn31.DataPropertyName = "datetimePerf";
-            this.dataGridViewTextBoxColumn31.HeaderText = "datetimePerf";
+            this.dataGridViewTextBoxColumn31.HeaderText = "Час виступу";
             this.dataGridViewTextBoxColumn31.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
             // 
             // dataGridViewTextBoxColumn32
             // 
             this.dataGridViewTextBoxColumn32.DataPropertyName = "durationPerf";
-            this.dataGridViewTextBoxColumn32.HeaderText = "durationPerf";
+            this.dataGridViewTextBoxColumn32.HeaderText = "Тривалість виступу";
             this.dataGridViewTextBoxColumn32.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
             // 
@@ -1451,37 +1461,23 @@
             // dataGridViewTextBoxColumn37
             // 
             this.dataGridViewTextBoxColumn37.DataPropertyName = "degreeSpeaker";
-            this.dataGridViewTextBoxColumn37.HeaderText = "degreeSpeaker";
+            this.dataGridViewTextBoxColumn37.HeaderText = "Науковий ступінь";
             this.dataGridViewTextBoxColumn37.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
             // 
             // dataGridViewTextBoxColumn38
             // 
             this.dataGridViewTextBoxColumn38.DataPropertyName = "academStatus";
-            this.dataGridViewTextBoxColumn38.HeaderText = "academStatus";
+            this.dataGridViewTextBoxColumn38.HeaderText = "Вчене звання";
             this.dataGridViewTextBoxColumn38.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
             // 
             // dataGridViewTextBoxColumn39
             // 
             this.dataGridViewTextBoxColumn39.DataPropertyName = "placeOfWork";
-            this.dataGridViewTextBoxColumn39.HeaderText = "placeOfWork";
+            this.dataGridViewTextBoxColumn39.HeaderText = "Місце роботи";
             this.dataGridViewTextBoxColumn39.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
-            // 
-            // dataGridViewTextBoxColumn40
-            // 
-            this.dataGridViewTextBoxColumn40.DataPropertyName = "positionSpeaker";
-            this.dataGridViewTextBoxColumn40.HeaderText = "positionSpeaker";
-            this.dataGridViewTextBoxColumn40.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
-            // 
-            // dataGridViewTextBoxColumn41
-            // 
-            this.dataGridViewTextBoxColumn41.DataPropertyName = "profBiogSpeaker";
-            this.dataGridViewTextBoxColumn41.HeaderText = "profBiogSpeaker";
-            this.dataGridViewTextBoxColumn41.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
             // 
             // dataGridViewTextBoxColumn49
             // 
@@ -1534,6 +1530,10 @@
             this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
             this.dataGridViewTextBoxColumn48.Visible = false;
             // 
+            // equipmentBindingSource
+            // 
+            this.equipmentBindingSource.DataSource = typeof(WindowsFormsApp2.Equipment);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1584,10 +1584,10 @@
             this.SpeakerbindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.conferenceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.equipmentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.performanceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.speakerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipmentBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1624,13 +1624,6 @@
         private System.Windows.Forms.DataGridView sectionDataGridView;
         private System.Windows.Forms.BindingSource sectionBindingSource;
         private System.Windows.Forms.DataGridView roomDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
         private System.Windows.Forms.BindingSource roomBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
@@ -1640,7 +1633,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
         private System.Windows.Forms.DataGridViewTextBoxColumn equipAndPerfsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.BindingNavigator SectionbindingNavigator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem1;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem1;
@@ -1706,43 +1698,50 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem5;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator17;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridView performanceDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
+        private System.Windows.Forms.DataGridView equipmentDataGridView;
+        private System.Windows.Forms.DataGridView speakerDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn48;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
-        private System.Windows.Forms.DataGridView equipmentDataGridView;
-        private System.Windows.Forms.DataGridView speakerDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
+        private System.Windows.Forms.DataGridViewTextBoxColumn positionSpeaker;
+        private System.Windows.Forms.DataGridViewTextBoxColumn profBiogSpeaker;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn49;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn50;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn48;
     }
 }
 
