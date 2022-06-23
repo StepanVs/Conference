@@ -13,15 +13,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="EquipAndPerfs">
-      <EntityTypeMapping TypeName="СonferenceModel.EquipAndPerf">
-        <MappingFragment StoreEntitySet="EquipAndPerf">
-          <ScalarProperty Name="idPerf" ColumnName="idPerf" />
-          <ScalarProperty Name="idEquip" ColumnName="idEquip" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Equipments">
       <EntityTypeMapping TypeName="СonferenceModel.Equipment">
         <MappingFragment StoreEntitySet="Equipment">
@@ -36,17 +27,6 @@
           <ScalarProperty Name="idSpeaker" ColumnName="idSpeaker" />
           <ScalarProperty Name="idPerf" ColumnName="idPerf" />
           <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Performances">
-      <EntityTypeMapping TypeName="СonferenceModel.Performance">
-        <MappingFragment StoreEntitySet="Performance">
-          <ScalarProperty Name="idPerf" ColumnName="idPerf" />
-          <ScalarProperty Name="idSect" ColumnName="idSect" />
-          <ScalarProperty Name="topicPerf" ColumnName="topicPerf" />
-          <ScalarProperty Name="datetimePerf" ColumnName="datetimePerf" />
-          <ScalarProperty Name="durationPerf" ColumnName="durationPerf" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -83,6 +63,18 @@
           <ScalarProperty Name="placeOfWork" ColumnName="placeOfWork" />
           <ScalarProperty Name="positionSpeaker" ColumnName="positionSpeaker" />
           <ScalarProperty Name="profBiogSpeaker" ColumnName="profBiogSpeaker" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Performances">
+      <EntityTypeMapping TypeName="СonferenceModel.Performance">
+        <MappingFragment StoreEntitySet="Performance">
+          <ScalarProperty Name="IdEquip" ColumnName="IdEquip" />
+          <ScalarProperty Name="durationPerf" ColumnName="durationPerf" />
+          <ScalarProperty Name="datetimePerf" ColumnName="datetimePerf" />
+          <ScalarProperty Name="topicrf" ColumnName="topicrf" />
+          <ScalarProperty Name="idSect" ColumnName="idSect" />
+          <ScalarProperty Name="idPerf" ColumnName="idPerf" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

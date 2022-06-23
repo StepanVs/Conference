@@ -26,12 +26,11 @@ namespace WindowsFormsApp2
         }
     
         public virtual DbSet<Conference> Conferences { get; set; }
-        public virtual DbSet<EquipAndPerf> EquipAndPerfs { get; set; }
         public virtual DbSet<Equipment> Equipments { get; set; }
         public virtual DbSet<PerfAndSpeaker> PerfAndSpeakers { get; set; }
-        public virtual DbSet<Performance> Performances { get; set; }
         public virtual DbSet<Room> Rooms { get; set; }
         public virtual DbSet<Section> Sections { get; set; }
         public virtual DbSet<Speaker> Speakers { get; set; }
+        public virtual DbSet<Performance> Performances { get; set; }
     }
 }

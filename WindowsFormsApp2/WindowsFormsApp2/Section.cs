@@ -17,7 +17,7 @@ namespace WindowsFormsApp2
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Section()
         {
-            this.Performances = new ObservableListSource<Performance>();
+            this.Performances = new HashSet<Performance>();
         }
     
         public int idSect { get; set; }
@@ -27,8 +27,8 @@ namespace WindowsFormsApp2
         public int roomSect { get; set; }
     
         public virtual Conference Conference { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ObservableListSource<Performance> Performances { get; set; }
         public virtual Room Room { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Performance> Performances { get; set; }
     }
 }

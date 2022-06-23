@@ -11,14 +11,6 @@
     <Property Name="build" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="ranked" Type="int" />
   </EntityType>
-  <EntityType Name="EquipAndPerf">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="idPerf" Type="int" Nullable="false" />
-    <Property Name="idEquip" Type="int" Nullable="false" />
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-  </EntityType>
   <EntityType Name="Equipment">
     <Key>
       <PropertyRef Name="idEquip" />
@@ -40,9 +32,10 @@
     </Key>
     <Property Name="idPerf" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="idSect" Type="int" Nullable="false" />
-    <Property Name="topicPerf" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="topicrf" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="datetimePerf" Type="datetime" Nullable="false" />
     <Property Name="durationPerf" Type="time" Precision="7" Nullable="false" />
+    <Property Name="IdEquip" Type="int" />
   </EntityType>
   <EntityType Name="Room">
     <Key>
@@ -77,30 +70,6 @@
     <Property Name="positionSpeaker" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="profBiogSpeaker" Type="varchar(max)" />
   </EntityType>
-  <Association Name="FK_EquipAndPerf_Equipment">
-    <End Role="Equipment" Type="Self.Equipment" Multiplicity="1" />
-    <End Role="EquipAndPerf" Type="Self.EquipAndPerf" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Equipment">
-        <PropertyRef Name="idEquip" />
-      </Principal>
-      <Dependent Role="EquipAndPerf">
-        <PropertyRef Name="idEquip" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_EquipAndPerf_Performance">
-    <End Role="Performance" Type="Self.Performance" Multiplicity="1" />
-    <End Role="EquipAndPerf" Type="Self.EquipAndPerf" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Performance">
-        <PropertyRef Name="idPerf" />
-      </Principal>
-      <Dependent Role="EquipAndPerf">
-        <PropertyRef Name="idPerf" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_PerfAndSpeaker_Performance">
     <End Role="Performance" Type="Self.Performance" Multiplicity="1" />
     <End Role="PerfAndSpeaker" Type="Self.PerfAndSpeaker" Multiplicity="*" />
@@ -122,6 +91,18 @@
       </Principal>
       <Dependent Role="PerfAndSpeaker">
         <PropertyRef Name="idSpeaker" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Performance_Equipment">
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="0..1" />
+    <End Role="Performance" Type="Self.Performance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipment">
+        <PropertyRef Name="idEquip" />
+      </Principal>
+      <Dependent Role="Performance">
+        <PropertyRef Name="IdEquip" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -163,21 +144,12 @@
   </Association>
   <EntityContainer Name="Хранилище СonferenceModelContainer">
     <EntitySet Name="Conference" EntityType="Self.Conference" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="EquipAndPerf" EntityType="Self.EquipAndPerf" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Equipment" EntityType="Self.Equipment" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PerfAndSpeaker" EntityType="Self.PerfAndSpeaker" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Performance" EntityType="Self.Performance" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Section" EntityType="Self.Section" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Speaker" EntityType="Self.Speaker" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_EquipAndPerf_Equipment" Association="Self.FK_EquipAndPerf_Equipment">
-      <End Role="Equipment" EntitySet="Equipment" />
-      <End Role="EquipAndPerf" EntitySet="EquipAndPerf" />
-    </AssociationSet>
-    <AssociationSet Name="FK_EquipAndPerf_Performance" Association="Self.FK_EquipAndPerf_Performance">
-      <End Role="Performance" EntitySet="Performance" />
-      <End Role="EquipAndPerf" EntitySet="EquipAndPerf" />
-    </AssociationSet>
     <AssociationSet Name="FK_PerfAndSpeaker_Performance" Association="Self.FK_PerfAndSpeaker_Performance">
       <End Role="Performance" EntitySet="Performance" />
       <End Role="PerfAndSpeaker" EntitySet="PerfAndSpeaker" />
@@ -185,6 +157,10 @@
     <AssociationSet Name="FK_PerfAndSpeaker_Speaker" Association="Self.FK_PerfAndSpeaker_Speaker">
       <End Role="Speaker" EntitySet="Speaker" />
       <End Role="PerfAndSpeaker" EntitySet="PerfAndSpeaker" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Performance_Equipment" Association="Self.FK_Performance_Equipment">
+      <End Role="Equipment" EntitySet="Equipment" />
+      <End Role="Performance" EntitySet="Performance" />
     </AssociationSet>
     <AssociationSet Name="FK_Performance_Section" Association="Self.FK_Performance_Section">
       <End Role="Section" EntitySet="Section" />

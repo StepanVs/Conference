@@ -6,20 +6,18 @@
     <edmx:Diagrams>
       <Diagram DiagramId="3f63a6e4d08942d280d74682284e9de1" Name="Diagram1" ZoomLevel="96">
         <EntityTypeShape EntityType="СonferenceModel.Conference" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="СonferenceModel.EquipAndPerf" Width="1.5" PointX="12.875" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="СonferenceModel.Equipment" Width="1.5" PointX="5" PointY="0.625" IsExpanded="true" />
         <EntityTypeShape EntityType="СonferenceModel.PerfAndSpeaker" Width="1.5" PointX="9.25" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="СonferenceModel.Performance" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="СonferenceModel.Room" Width="1.5" PointX="1.125" PointY="6.5" IsExpanded="true" />
         <EntityTypeShape EntityType="СonferenceModel.Section" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="СonferenceModel.Speaker" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
         <AssociationConnector Association="СonferenceModel.FK_Section_Conference" ManuallyRouted="false" />
-        <AssociationConnector Association="СonferenceModel.FK_EquipAndPerf_Equipment" ManuallyRouted="false" />
-        <AssociationConnector Association="СonferenceModel.FK_EquipAndPerf_Performance" ManuallyRouted="false" />
-        <AssociationConnector Association="СonferenceModel.FK_PerfAndSpeaker_Performance" ManuallyRouted="false" />
         <AssociationConnector Association="СonferenceModel.FK_PerfAndSpeaker_Speaker" ManuallyRouted="false" />
-        <AssociationConnector Association="СonferenceModel.FK_Performance_Section" ManuallyRouted="false" />
         <AssociationConnector Association="СonferenceModel.FK_Section_Rooms" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="СonferenceModel.Performance" Width="1.5" PointX="6.125" PointY="3.375" />
+        <AssociationConnector Association="СonferenceModel.FK_Performance_Equipment" />
+        <AssociationConnector Association="СonferenceModel.FK_PerfAndSpeaker_Performance" />
+        <AssociationConnector Association="СonferenceModel.FK_Performance_Section" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

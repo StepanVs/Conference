@@ -18,7 +18,7 @@ namespace WindowsFormsApp2
         public int idPerf { get; set; }
         public int id { get; set; }
     
-        public virtual Performance Performance { get; set; }
         public virtual Speaker Speaker { get; set; }
+        public virtual Performance Performance { get; set; }
     }
 }
