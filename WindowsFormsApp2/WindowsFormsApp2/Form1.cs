@@ -90,7 +90,7 @@ namespace WindowsFormsApp2
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
             performanceDataGridView.EndEdit();
-            DB_context.SaveChanges();
+            DB_context.SaveChanges(); 
             performanceDataGridView.Refresh();
         }
 
@@ -149,6 +149,19 @@ namespace WindowsFormsApp2
             DB_context.SaveChanges();
 
 
+        }
+
+        private void performanceDataGridView_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            PerfInfo perfInfo = new PerfInfo(performanceBindingSource, sectionBindingSource);
+            perfInfo.Owner = this;
+
+            if (perfInfo.ShowDialog() == DialogResult.Cancel)
+                DB_context.Entry(performanceBindingSource.Current).State = EntityState.Unchanged;
+            else
+                DB_context.Entry(performanceBindingSource.Current).State = EntityState.Modified;
+
+            DB_context.SaveChanges();
         }
     }
 }

@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class SpeakerInfo : Form
+    public partial class PerfInfo : Form
     {
-        public SpeakerInfo(BindingSource SpeakbindingSource, BindingSource PerfbindingSource)
+        public PerfInfo(BindingSource perfbindingSource, BindingSource sectbindingSource)
         {
             InitializeComponent();
-            speakerBindingSource.DataSource = SpeakbindingSource.Current;
-            performanceBindingSource.DataSource = PerfbindingSource;
+            performanceBindingSource.DataSource = perfbindingSource.Current;
+            sectionBindingSource.DataSource = sectbindingSource;
         }
     }
 }

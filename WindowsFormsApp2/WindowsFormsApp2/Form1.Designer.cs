@@ -93,8 +93,6 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.speakerDataGridView = new System.Windows.Forms.DataGridView();
-            this.positionSpeaker = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.profBiogSpeaker = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SpeakerbindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem5 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem5 = new System.Windows.Forms.ToolStripLabel();
@@ -125,6 +123,8 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.positionSpeaker = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profBiogSpeaker = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -133,14 +133,14 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.conferenceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.roomBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -161,13 +161,13 @@
             this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.equipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.conferenceBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.conferenceBindingNavigator)).BeginInit();
             this.conferenceBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.conferenceDataGridView)).BeginInit();
@@ -420,7 +420,7 @@
             this.bindingNavigatorAddNewItem1,
             this.bindingNavigatorDeleteItem1,
             this.toolStripButton1});
-            this.SectionbindingNavigator1.Location = new System.Drawing.Point(3, 834);
+            this.SectionbindingNavigator1.Location = new System.Drawing.Point(3, 839);
             this.SectionbindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
             this.SectionbindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem1;
             this.SectionbindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem1;
@@ -428,7 +428,7 @@
             this.SectionbindingNavigator1.Name = "SectionbindingNavigator1";
             this.SectionbindingNavigator1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.SectionbindingNavigator1.PositionItem = this.bindingNavigatorPositionItem1;
-            this.SectionbindingNavigator1.Size = new System.Drawing.Size(1694, 38);
+            this.SectionbindingNavigator1.Size = new System.Drawing.Size(1694, 33);
             this.SectionbindingNavigator1.TabIndex = 1;
             this.SectionbindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -438,13 +438,13 @@
             this.bindingNavigatorAddNewItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem1.Image")));
             this.bindingNavigatorAddNewItem1.Name = "bindingNavigatorAddNewItem1";
             this.bindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorAddNewItem1.Text = "Добавить";
             // 
             // bindingNavigatorCountItem1
             // 
             this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
-            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(65, 33);
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(65, 28);
             this.bindingNavigatorCountItem1.Text = "для {0}";
             this.bindingNavigatorCountItem1.ToolTipText = "Общее число элементов";
             // 
@@ -454,7 +454,7 @@
             this.bindingNavigatorDeleteItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem1.Image")));
             this.bindingNavigatorDeleteItem1.Name = "bindingNavigatorDeleteItem1";
             this.bindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorDeleteItem1.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem1
@@ -463,7 +463,7 @@
             this.bindingNavigatorMoveFirstItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem1.Image")));
             this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem1";
             this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveFirstItem1.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem1
@@ -472,13 +472,13 @@
             this.bindingNavigatorMovePreviousItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem1.Image")));
             this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem1";
             this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMovePreviousItem1.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator3
             // 
             this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator3";
-            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorPositionItem1
             // 
@@ -492,7 +492,7 @@
             // bindingNavigatorSeparator4
             // 
             this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator4";
-            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorMoveNextItem1
             // 
@@ -500,7 +500,7 @@
             this.bindingNavigatorMoveNextItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem1.Image")));
             this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem1";
             this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveNextItem1.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem1
@@ -509,20 +509,20 @@
             this.bindingNavigatorMoveLastItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem1.Image")));
             this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem1";
             this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveLastItem1.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator5
             // 
             this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
-            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 33);
             // 
             // toolStripButton1
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(34, 33);
+            this.toolStripButton1.Size = new System.Drawing.Size(34, 28);
             this.toolStripButton1.Text = "Сохранить данные";
             this.toolStripButton1.Click += new System.EventHandler(this.SectiontoolStripButton1_Click);
             // 
@@ -748,6 +748,7 @@
             this.performanceDataGridView.RowTemplate.Height = 28;
             this.performanceDataGridView.Size = new System.Drawing.Size(1688, 802);
             this.performanceDataGridView.TabIndex = 1;
+            this.performanceDataGridView.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.performanceDataGridView_RowHeaderMouseDoubleClick);
             // 
             // PerfomancebindingNavigator1
             // 
@@ -913,20 +914,6 @@
             this.speakerDataGridView.Size = new System.Drawing.Size(1688, 802);
             this.speakerDataGridView.TabIndex = 1;
             this.speakerDataGridView.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.speakerDataGridView_RowHeaderMouseDoubleClick);
-            // 
-            // positionSpeaker
-            // 
-            this.positionSpeaker.DataPropertyName = "positionSpeaker";
-            this.positionSpeaker.HeaderText = "Посада";
-            this.positionSpeaker.MinimumWidth = 8;
-            this.positionSpeaker.Name = "positionSpeaker";
-            // 
-            // profBiogSpeaker
-            // 
-            this.profBiogSpeaker.DataPropertyName = "profBiogSpeaker";
-            this.profBiogSpeaker.HeaderText = "Додаткова інформація";
-            this.profBiogSpeaker.MinimumWidth = 8;
-            this.profBiogSpeaker.Name = "profBiogSpeaker";
             // 
             // SpeakerbindingNavigator1
             // 
@@ -1232,6 +1219,20 @@
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.Width = 770;
             // 
+            // positionSpeaker
+            // 
+            this.positionSpeaker.DataPropertyName = "positionSpeaker";
+            this.positionSpeaker.HeaderText = "Посада";
+            this.positionSpeaker.MinimumWidth = 8;
+            this.positionSpeaker.Name = "positionSpeaker";
+            // 
+            // profBiogSpeaker
+            // 
+            this.profBiogSpeaker.DataPropertyName = "profBiogSpeaker";
+            this.profBiogSpeaker.HeaderText = "Додаткова інформація";
+            this.profBiogSpeaker.MinimumWidth = 8;
+            this.profBiogSpeaker.Name = "profBiogSpeaker";
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "idConf";
@@ -1285,67 +1286,67 @@
             // 
             this.sectionBindingSource.DataSource = typeof(WindowsFormsApp2.Section);
             // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "idSect";
+            this.dataGridViewTextBoxColumn12.HeaderText = "idSect";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "idConf";
+            this.dataGridViewTextBoxColumn13.HeaderText = "idConf";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "nameSect";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Назва секції";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "headSect";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Головна секції";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "roomSect";
+            this.dataGridViewTextBoxColumn16.HeaderText = "roomSect";
+            this.dataGridViewTextBoxColumn16.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Conference";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Conference";
+            this.dataGridViewTextBoxColumn17.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "Room";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Room";
+            this.dataGridViewTextBoxColumn19.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.Visible = false;
+            // 
             // roomBindingSource
             // 
             this.roomBindingSource.DataSource = typeof(WindowsFormsApp2.Room);
             // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "idRoom";
-            this.dataGridViewTextBoxColumn20.HeaderText = "idRoom";
-            this.dataGridViewTextBoxColumn20.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "name";
-            this.dataGridViewTextBoxColumn21.HeaderText = "Назва приміщення";
-            this.dataGridViewTextBoxColumn21.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "UCR";
-            this.dataGridViewTextBoxColumn22.HeaderText = "UCR";
-            this.dataGridViewTextBoxColumn22.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "DCR";
-            this.dataGridViewTextBoxColumn23.HeaderText = "DCR";
-            this.dataGridViewTextBoxColumn23.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "Number";
-            this.dataGridViewTextBoxColumn24.HeaderText = "Номер приміщення";
-            this.dataGridViewTextBoxColumn24.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "ULC";
-            this.dataGridViewTextBoxColumn25.HeaderText = "ULC";
-            this.dataGridViewTextBoxColumn25.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "DLC";
-            this.dataGridViewTextBoxColumn26.HeaderText = "DLC";
-            this.dataGridViewTextBoxColumn26.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.Visible = false;
-            // 
             // dataGridViewTextBoxColumn28
             // 
             this.dataGridViewTextBoxColumn28.DataPropertyName = "idPerf";
+            this.dataGridViewTextBoxColumn28.FillWeight = 50F;
             this.dataGridViewTextBoxColumn28.HeaderText = "idPerf";
             this.dataGridViewTextBoxColumn28.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
@@ -1357,7 +1358,6 @@
             this.dataGridViewTextBoxColumn29.HeaderText = "idSect";
             this.dataGridViewTextBoxColumn29.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            this.dataGridViewTextBoxColumn29.Visible = false;
             // 
             // dataGridViewTextBoxColumn30
             // 
@@ -1480,58 +1480,60 @@
             // 
             this.conferenceBindingSource1.DataSource = typeof(WindowsFormsApp2.Conference);
             // 
-            // dataGridViewTextBoxColumn12
+            // dataGridViewTextBoxColumn20
             // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "idSect";
-            this.dataGridViewTextBoxColumn12.HeaderText = "idSect";
-            this.dataGridViewTextBoxColumn12.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.Visible = false;
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "idRoom";
+            this.dataGridViewTextBoxColumn20.HeaderText = "idRoom";
+            this.dataGridViewTextBoxColumn20.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.Visible = false;
             // 
-            // dataGridViewTextBoxColumn13
+            // dataGridViewTextBoxColumn21
             // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "idConf";
-            this.dataGridViewTextBoxColumn13.HeaderText = "idConf";
-            this.dataGridViewTextBoxColumn13.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Назва приміщення";
+            this.dataGridViewTextBoxColumn21.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
             // 
-            // dataGridViewTextBoxColumn14
+            // dataGridViewTextBoxColumn22
             // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "nameSect";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Назва секції";
-            this.dataGridViewTextBoxColumn14.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "UCR";
+            this.dataGridViewTextBoxColumn22.HeaderText = "UCR";
+            this.dataGridViewTextBoxColumn22.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.Visible = false;
             // 
-            // dataGridViewTextBoxColumn15
+            // dataGridViewTextBoxColumn23
             // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "headSect";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Головна секції";
-            this.dataGridViewTextBoxColumn15.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "DCR";
+            this.dataGridViewTextBoxColumn23.HeaderText = "DCR";
+            this.dataGridViewTextBoxColumn23.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.Visible = false;
             // 
-            // dataGridViewTextBoxColumn16
+            // dataGridViewTextBoxColumn24
             // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "roomSect";
-            this.dataGridViewTextBoxColumn16.HeaderText = "roomSect";
-            this.dataGridViewTextBoxColumn16.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "Number";
+            this.dataGridViewTextBoxColumn24.HeaderText = "Номер приміщення";
+            this.dataGridViewTextBoxColumn24.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.Visible = false;
             // 
-            // dataGridViewTextBoxColumn17
+            // dataGridViewTextBoxColumn25
             // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "Conference";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Conference";
-            this.dataGridViewTextBoxColumn17.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.Visible = false;
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "ULC";
+            this.dataGridViewTextBoxColumn25.HeaderText = "ULC";
+            this.dataGridViewTextBoxColumn25.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.Visible = false;
             // 
-            // dataGridViewTextBoxColumn19
+            // dataGridViewTextBoxColumn26
             // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "Room";
-            this.dataGridViewTextBoxColumn19.HeaderText = "Room";
-            this.dataGridViewTextBoxColumn19.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.Visible = false;
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "DLC";
+            this.dataGridViewTextBoxColumn26.HeaderText = "DLC";
+            this.dataGridViewTextBoxColumn26.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.Visible = false;
             // 
             // Form1
             // 
@@ -1703,13 +1705,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.BindingSource conferenceBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
@@ -1724,14 +1727,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn profBiogSpeaker;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn49;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn50;
-        private System.Windows.Forms.BindingSource conferenceBindingSource1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
     }
 }
 
